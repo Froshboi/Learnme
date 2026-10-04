@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UI/UX Design Fundamentals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F4F8; --surface:#FFFFFF; --ink:#101828; --muted:#55607A; --line:#D9DEE8;
+  --accent:#2B50E6; --accent-ink:#FFFFFF; --accent-soft:#E6ECFF;
+  --ok:#12805C; --ok-soft:#DDF3EA; --bad:#B8302A; --bad-soft:#FBE4E2;
+  --display:'Bricolage Grotesque',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --body:'Instrument Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1320; --surface:#161D2E; --ink:#EEF1F8; --muted:#9AA5BF; --line:#2A3350;
+    --accent:#8AA2FF; --accent-ink:#0E1320; --accent-soft:#1E2850;
+    --ok:#5FD2A0; --ok-soft:#14352B; --bad:#FF8A80; --bad-soft:#3A1B1B;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1320; --surface:#161D2E; --ink:#EEF1F8; --muted:#9AA5BF; --line:#2A3350;
+  --accent:#8AA2FF; --accent-ink:#0E1320; --accent-soft:#1E2850;
+  --ok:#5FD2A0; --ok-soft:#14352B; --bad:#FF8A80; --bad-soft:#3A1B1B;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0;letter-spacing:-0.02em}
+h1{font-size:clamp(36px,10vw,56px);font-weight:800}
+h2{font-size:clamp(26px,6.5vw,34px);font-weight:700}
+h3{font-size:21px;font-weight:700;letter-spacing:-0.01em}
+p{margin:0 0 12px}
+a{color:var(--accent)}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.top-in{max-width:720px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px}
+.brand{font-family:var(--display);font-weight:700;color:var(--ink);text-decoration:none;white-space:nowrap}
+.prog{flex:1;height:8px;background:var(--line);border-radius:8px;overflow:hidden}
+.prog span{display:block;height:100%;width:0;background:var(--accent);border-radius:8px;transition:width .4s}
+.prog-label{font-size:14px;color:var(--muted);white-space:nowrap}
+
+.wrap{max-width:720px;margin:0 auto;padding:28px 20px 72px}
+.stack>*+*{margin-top:24px}
+.muted{color:var(--muted)}
+.small{font-size:15px}
+.back{display:inline-flex;align-items:center;min-height:44px;color:var(--muted);text-decoration:none;margin-bottom:8px}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 20px;text-decoration:none;color:var(--ink);min-height:72px}
+.row:hover{border-color:var(--accent)}
+.row-title{font-family:var(--display);font-weight:700;font-size:19px;line-height:1.2}
+.pill{font-size:14px;font-weight:600;padding:4px 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+.pill.done{background:var(--ok-soft);color:var(--ok)}
+.pill.locked{background:var(--line);color:var(--muted)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:12px;border:2px solid var(--accent);background:var(--accent);color:var(--accent-ink);font-weight:600;cursor:pointer;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+
+/* hero demo */
+.demo{display:grid;gap:16px}
+.demo-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;transition:all .3s}
+.demo-card .d-title{color:var(--muted);font-size:16px;margin-bottom:6px}
+.demo-card .d-body{color:var(--muted);font-size:16px;margin-bottom:6px}
+.demo-card .d-btn{display:inline-block;color:var(--muted);font-size:16px;padding:0;background:none;border:0;border-radius:12px;min-height:0}
+.demo-card.on .d-title{font-family:var(--display);font-weight:800;font-size:28px;color:var(--ink);margin-bottom:8px;line-height:1.1}
+.demo-card.on .d-body{margin-bottom:24px}
+.demo-card.on .d-btn{background:var(--accent);color:var(--accent-ink);font-weight:600;padding:0 24px;min-height:48px;line-height:48px}
+
+/* lessons */
+.lesson ul{margin:12px 0;padding-left:22px}
+.lesson li{margin-bottom:8px;max-width:62ch}
+.idea{border-left:4px solid var(--accent);background:var(--accent-soft);padding:12px 16px;border-radius:0 12px 12px 0;margin-top:16px}
+.lesson-id{font-family:var(--display);color:var(--accent);margin-right:8px}
+.task{border-left:4px solid var(--ok)}
+.task dt{font-weight:600;margin-top:12px}
+.task dd{margin:2px 0 0}
+
+/* labs */
+.lab label{display:block;font-weight:600;font-size:15px;margin-bottom:4px}
+.lab-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+.lab input[type=number],.lab select{width:100%;min-height:44px;padding:0 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.lab input[type=color]{width:100%;height:44px;padding:2px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.lab-out{display:grid;gap:16px;margin-top:8px}
+.cl-card{background:var(--bg);border:1px dashed var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;align-items:flex-start}
+.cl-title{font-family:var(--display);font-weight:700;color:var(--ink)}
+.cl-body{color:var(--muted);margin-bottom:16px}
+.cl-btn{background:var(--accent);color:var(--accent-ink);border:0;border-radius:10px;padding:0 20px;font-weight:600}
+.score{font-family:var(--display);font-size:32px;font-weight:800}
+.fb{margin:8px 0 0;padding-left:20px}
+.sample{border-radius:12px;padding:16px;border:1px solid var(--line)}
+.ratio{font-family:var(--display);font-size:32px;font-weight:800}
+.chk{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+
+/* quiz */
+.qbar{height:6px;background:var(--line);border-radius:6px;overflow:hidden;margin-bottom:20px}
+.qbar span{display:block;height:100%;background:var(--accent)}
+.opts{display:grid;gap:12px;margin:20px 0}
+.opt{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;min-height:56px;padding:12px 16px;border-radius:12px;border:2px solid var(--line);background:var(--surface);cursor:pointer}
+.opt:hover:not([disabled]){border-color:var(--accent)}
+.opt .ltr{font-family:var(--display);font-weight:700;color:var(--muted);min-width:20px}
+.opt.sel{border-color:var(--accent);background:var(--accent-soft)}
+.opt.correct{border-color:var(--ok);background:var(--ok-soft)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.opt[disabled]{cursor:default}
+.explain{padding:12px 16px;border-radius:12px;background:var(--surface);border:1px solid var(--line);margin-bottom:16px}
+.big-score{font-family:var(--display);font-weight:800;font-size:clamp(56px,16vw,88px);line-height:1}
+
+/* answer key */
+.k-q{padding:16px 0;border-top:1px solid var(--line)}
+.k-q:first-of-type{border-top:0}
+.k-a{color:var(--ok);font-weight:600}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (min-width:560px){.lab-out{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="#/">UI/UX Foundations</a>
+  <div class="prog" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progbar"><span id="progfill"></span></div>
+  <span class="prog-label" id="proglabel">0%</span>
+</div></header>
+<main class="wrap" id="app"></main>
+
+<script>
+(function(){
+let C, Q;
+const app = document.getElementById('app');
+const KEY = 'uiux-course-v1';
+let store = {quiz:{}, final:null};
+try { const s = localStorage.getItem(KEY); if (s) store = Object.assign(store, JSON.parse(s)); } catch(e){}
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(store)); } catch(e){} }
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const L = 'ABCD';
+const modQ = n => Q.modules.find(m => m.module_number === n);
+const modC = n => C.modules.find(m => m.module_number === n);
+
+function updateProgress(){
+  const total = C.modules.length + 1;
+  const done = Object.keys(store.quiz).length + (store.final ? 1 : 0);
+  const pct = Math.round(done / total * 100);
+  document.getElementById('progfill').style.width = pct + '%';
+  document.getElementById('progbar').setAttribute('aria-valuenow', pct);
+  document.getElementById('proglabel').textContent = pct + '%';
+}
+
+/* ---------- Home ---------- */
+function home(){
+  const rows = C.modules.map(m => {
+    const r = store.quiz[m.module_number];
+    return `<a class="row" href="#/m/${m.module_number}">
+      <div><div class="row-title">${esc(m.title)}</div>
+      <div class="muted small">Week ${m.week}, ${m.lessons.length} lessons</div></div>
+      <span class="pill ${r?'done':''}">${r ? 'Quiz '+r.score+'/'+r.total : 'Start'}</span></a>`;
+  }).join('');
+  const f = store.final;
+  return `<div class="stack">
+    <div>
+      <h1>${esc(C.course_title)}</h1>
+      <p class="muted" style="margin-top:12px;max-width:46ch">${esc(C.subtitle)}</p>
+    </div>
+    <div class="demo">
+      <div class="demo-card" id="demo" aria-live="polite">
+        <div class="d-title">Weekend market</div>
+        <div class="d-body">Fresh produce, live music and street food every Saturday morning.</div>
+        <span class="d-btn">Get tickets</span>
+      </div>
+      <div><button class="btn ghost" id="demo-toggle" aria-pressed="false">Add hierarchy</button></div>
+      <p class="muted small">Same words, same card. Only size, weight, color and space changed. That is the whole first week.</p>
+    </div>
+    <h2>Your four weeks</h2>
+    <div class="stack" style="--g:12px">${rows}
+      <a class="row" href="#/quiz/final"><div><div class="row-title">${esc(Q.final.title)}</div>
+        <div class="muted small">${Q.final.questions.length} questions across all four modules</div></div>
+        <span class="pill ${f?'done':''}">${f ? f.score+'/'+f.total : 'Start'}</span></a>
+      <a class="row" href="#/key"><div><div class="row-title">Answer key</div>
+        <div class="muted small">${f ? 'Every quiz answer with explanations and task examples' : 'Unlocks after you finish the final exam'}</div></div>
+        <span class="pill ${f?'done':'locked'}">${f ? 'Open' : 'Locked'}</span></a>
+    </div>
+  </div>`;
+}
+
+/* ---------- Module ---------- */
+function labHTML(kind){
+  if (kind === 'card_lab') return `<section class="card lab" aria-labelledby="cl-h">
+    <h3 id="cl-h">Card hierarchy lab</h3>
+    <p class="muted small">Task T1. Adjust the numbers until the card passes every rule.</p>
+    <div class="lab-grid">
+      <div><label for="cl-title">Title size (px)</label><input id="cl-title" type="number" inputmode="numeric" value="16"></div>
+      <div><label for="cl-body">Body size (px)</label><input id="cl-body" type="number" inputmode="numeric" value="16"></div>
+      <div><label for="cl-gap">Title to body gap (px)</label><input id="cl-gap" type="number" inputmode="numeric" value="13"></div>
+      <div><label for="cl-btn">Button height (px)</label><input id="cl-btn" type="number" inputmode="numeric" value="36"></div>
+      <div style="grid-column:1/-1"><label for="cl-order">Order, top to bottom</label>
+        <select id="cl-order"><option value="btb">Button, title, body</option><option value="tbb">Title, body, button</option></select></div>
+    </div>
+    <div class="lab-out">
+      <div class="cl-card" id="cl-card"></div>
+      <div><div class="score" id="cl-score"></div><ul class="fb" id="cl-fb"></ul></div>
+    </div></section>`;
+  if (kind === 'contrast_lab') return `<section class="card lab" aria-labelledby="ct-h">
+    <h3 id="ct-h">Contrast checker</h3>
+    <p class="muted small">Try your task T3 palette. Normal text needs 4.5:1, large text 3:1.</p>
+    <div class="lab-grid">
+      <div><label for="ct-fg">Text color</label><input id="ct-fg" type="color" value="#8a8f98"></div>
+      <div><label for="ct-bg">Background color</label><input id="ct-bg" type="color" value="#ffffff"></div>
+    </div>
+    <div class="lab-out">
+      <div class="sample" id="ct-sample"><strong style="font-size:24px">Large heading</strong><br>Normal body text for reading.</div>
+      <div><div class="ratio" id="ct-ratio"></div><div class="chk" id="ct-chk"></div></div>
+    </div></section>`;
+  return '';
+}
+
+function module(n){
+  const m = modC(n); if (!m) return '<p>Module not found.</p>';
+  const t = C.tasks.find(x => x.module_number === n);
+  const r = store.quiz[n];
+  const lessons = m.lessons.map(l => `<article class="card lesson">
+    <h3><span class="lesson-id">${esc(l.id)}</span>${esc(l.title)}</h3>
+    <ul>${l.concepts.map(c => `<li>${esc(c)}</li>`).join('')}</ul>
+    ${l.example ? `<p class="muted small" style="margin:12px 0 0"><strong>Try it.</strong> ${esc(l.example)}</p>` : ''}
+    <div class="idea"><strong>Key idea.</strong> ${esc(l.takeaway)}</div></article>`).join('');
+  const next = n < C.modules.length ? `<a class="btn ghost" href="#/m/${n+1}">Next module</a>` : `<a class="btn ghost" href="#/quiz/final">Final exam</a>`;
+  return `<div class="stack">
+    <div><a class="back" href="#/">Back to course</a>
+    <p class="muted small" style="margin-bottom:4px">Week ${m.week}</p>
+    <h1 style="font-size:clamp(32px,9vw,46px)">${esc(m.title)}</h1>
+    <p class="muted" style="margin-top:12px">${esc(m.summary)}</p></div>
+    ${lessons}
+    ${labHTML(m.lab)}
+    ${t ? `<section class="card task"><h3>Task ${esc(t.task_id)}: ${esc(t.title)}</h3>
+      <dl style="margin:0"><dt>Objective</dt><dd>${esc(t.objective)}</dd><dt>Constraints</dt><dd>${esc(t.constraints)}</dd></dl></section>` : ''}
+    <div class="btns"><a class="btn" href="#/quiz/${n}">${r ? 'Retake quiz ('+r.score+'/'+r.total+')' : 'Take the module quiz'}</a>${next}</div>
+  </div>`;
+}
+
+function initCardLab(){
+  const g = id => document.getElementById(id);
+  if (!g('cl-card')) return;
+  function run(){
+    const t = +g('cl-title').value||0, b = +g('cl-body').value||0, gap = +g('cl-gap').value||0, h = +g('cl-btn').value||0, order = g('cl-order').value;
+    const T = `<div class="cl-title" style="font-size:${t}px;margin-bottom:${gap}px">Weekend market</div>`;
+    const B = `<div class="cl-body" style="font-size:${b}px">Fresh produce and live music every Saturday.</div>`;
+    const K = `<button class="cl-btn" style="height:${h}px" tabindex="-1">Get tickets</button>`;
+    g('cl-card').innerHTML = order === 'tbb' ? T+B+K : K+'<div style="height:16px"></div>'+T+B;
+    let score = 100; const fb = [];
+    if (t <= b){ score -= 25; fb.push('Title font size must be distinctly larger than body text.'); }
+    if (order !== 'tbb'){ score -= 30; fb.push('Incorrect order: title top, body middle, button bottom.'); }
+    if (gap % 8 !== 0){ score -= 15; fb.push('Gap between title and body is '+gap+'px. Use multiples of 8.'); }
+    if (h < 44){ score -= 30; fb.push('Button height is too small for touch targets (under 44px).'); }
+    score = Math.max(0, score);
+    g('cl-score').textContent = score + '/100' + (score >= 80 ? ' Passed' : '');
+    g('cl-fb').innerHTML = (fb.length ? fb : ['All hierarchy rules passed.']).map(x => '<li>'+esc(x)+'</li>').join('');
+  }
+  ['cl-title','cl-body','cl-gap','cl-btn','cl-order'].forEach(id => g(id).addEventListener('input', run));
+  run();
+}
+
+function lum(hex){
+  const c = [1,3,5].map(i => parseInt(hex.substr(i,2),16)/255).map(v => v <= 0.03928 ? v/12.92 : Math.pow((v+0.055)/1.055, 2.4));
+  return 0.2126*c[0] + 0.7152*c[1] + 0.0722*c[2];
+}
+function initContrastLab(){
+  const g = id => document.getElementById(id);
+  if (!g('ct-fg')) return;
+  function run(){
+    const fg = g('ct-fg').value, bg = g('ct-bg').value;
+    const a = lum(fg), b = lum(bg);
+    const ratio = (Math.max(a,b)+0.05)/(Math.min(a,b)+0.05);
+    g('ct-sample').style.color = fg; g('ct-sample').style.background = bg;
+    g('ct-ratio').textContent = ratio.toFixed(2) + ':1';
+    const p = (ok, label) => `<span class="pill ${ok?'done':''}" style="${ok?'':'background:var(--bad-soft);color:var(--bad)'}">${ok?'Pass':'Fail'}: ${label}</span>`;
+    g('ct-chk').innerHTML = p(ratio>=4.5,'normal text') + p(ratio>=3,'large text');
+  }
+  g('ct-fg').addEventListener('input', run); g('ct-bg').addEventListener('input', run);
+  run();
+}
+
+/* ---------- Quiz ---------- */
+let qs = null;
+function startQuiz(key){
+  const list = key === 'final' ? Q.final.questions : modQ(+key).questions;
+  const title = key === 'final' ? Q.final.title : modQ(+key).title;
+  qs = {key, list, title, i:0, ans:Array(list.length).fill(null), done:false, mode: key === 'final' ? 'exam' : 'practice'};
+}
+function quiz(){
+  const q = qs.list[qs.i], a = qs.ans[qs.i], last = qs.i === qs.list.length-1;
+  const practice = qs.mode === 'practice', answered = a !== null;
+  const opts = q.options.map((o, idx) => {
+    let cls = '';
+    if (practice && answered){ if (idx === q.answer) cls = 'correct'; else if (idx === a) cls = 'wrong'; }
+    else if (!practice && idx === a) cls = 'sel';
+    return `<button class="opt ${cls}" data-opt="${idx}" ${practice && answered ? 'disabled' : ''}><span class="ltr">${L[idx]}</span><span>${esc(o)}</span></button>`;
+  }).join('');
+  const fb = practice && answered ? `<div class="explain" role="status"><strong>${a === q.answer ? 'Correct.' : 'Not quite. The answer is '+L[q.answer]+'.'}</strong> ${esc(q.explanation)}</div>` : '';
+  const canNext = answered;
+  return `<div>
+    <a class="back" href="#/${qs.key === 'final' ? '' : 'm/'+qs.key}">Leave quiz</a>
+    <p class="muted small" style="margin-bottom:8px">${esc(qs.title)}, question ${qs.i+1} of ${qs.list.length}</p>
+    <div class="qbar"><span style="width:${(qs.i+(practice&&answered?1:0))/qs.list.length*100}%"></span></div>
+    <h2 style="font-size:clamp(22px,5.5vw,28px)">${esc(q.q)}</h2>
+    <div class="opts" role="group" aria-label="Answer options">${opts}</div>
+    ${fb}
+    <div class="btns">
+      ${!practice && qs.i > 0 ? '<button class="btn ghost" data-prev>Previous</button>' : ''}
+      <button class="btn" data-next ${canNext ? '' : 'disabled'}>${last ? (practice ? 'See results' : 'Submit exam') : 'Next question'}</button>
+    </div></div>`;
+}
+function finishQuiz(){
+  const score = qs.list.reduce((s, q, i) => s + (qs.ans[i] === q.answer ? 1 : 0), 0);
+  qs.score = score; qs.done = true;
+  const rec = {score, total: qs.list.length};
+  if (qs.key === 'final') store.final = Object.assign(rec, {answers: qs.ans.slice()});
+  else store.quiz[qs.key] = rec;
+  save(); updateProgress();
+}
+function results(){
+  const pct = Math.round(qs.score/qs.list.length*100);
+  const msg = pct >= 80 ? 'Strong work.' : pct >= 60 ? 'Good progress. Review the lessons you missed.' : 'Review the lessons and try again.';
+  const isFinal = qs.key === 'final';
+  const missed = qs.list.map((q,i) => ({q,i})).filter(x => qs.ans[x.i] !== x.q.answer);
+  const review = (!isFinal && missed.length) ? `<div class="card"><h3>Review</h3>${missed.map(x => `<div class="k-q"><strong>${esc(x.q.q)}</strong><div class="k-a">Answer: ${L[x.q.answer]}. ${esc(x.q.options[x.q.answer])}</div><div class="muted small">${esc(x.q.explanation)}</div></div>`).join('')}</div>` : '';
+  const nextN = !isFinal ? +qs.key : 0;
+  const btns = isFinal
+    ? `<a class="btn" href="#/key">Open the answer key</a><a class="btn ghost" href="#/">Course home</a>`
+    : `<a class="btn" href="${nextN < C.modules.length ? '#/m/'+(nextN+1) : '#/quiz/final'}">${nextN < C.modules.length ? 'Next module' : 'Start final exam'}</a><button class="btn ghost" data-retry>Retake quiz</button>`;
+  return `<div class="stack"><div><p class="muted small">${esc(qs.title)}</p>
+    <div class="big-score">${qs.score}/${qs.list.length}</div>
+    <p style="margin-top:8px">${pct}%. ${msg}</p></div>${review}<div class="btns">${btns}</div></div>`;
+}
+
+/* ---------- Answer key ---------- */
+function keyBlock(title, list){
+  return `<section class="card"><h3>${esc(title)}</h3>${list.map((q,i) => `<div class="k-q">
+    <strong>${i+1}. ${esc(q.q)}</strong>
+    <div class="k-a">${L[q.answer]}. ${esc(q.options[q.answer])}</div>
+    <div class="muted small">${esc(q.explanation)}</div></div>`).join('')}</section>`;
+}
+function key(){
+  if (!store.final) return `<div class="stack"><a class="back" href="#/">Back to course</a>
+    <h1 style="font-size:clamp(32px,9vw,46px)">Answer key</h1>
+    <div class="card"><p>The answer key opens once you finish the final exam, so it works as a real check and not a shortcut.</p>
+    <a class="btn" href="#/quiz/final">Go to the final exam</a></div></div>`;
+  const f = store.final;
+  const tasks = C.tasks.map(t => `<div class="k-q"><strong>Task ${esc(t.task_id)}: ${esc(t.title)}</strong>
+    <div class="muted small" style="margin-top:4px">${esc(t.constraints)}</div>
+    <div class="k-a" style="font-weight:500">Example answer: ${esc(t.exemplar)}</div></div>`).join('');
+  return `<div class="stack"><a class="back" href="#/">Back to course</a>
+    <div><h1 style="font-size:clamp(32px,9vw,46px)">Answer key</h1>
+    <p class="muted" style="margin-top:12px">Your final exam score: ${f.score}/${f.total}.</p></div>
+    ${Q.modules.map(m => keyBlock('Module '+m.module_number+': '+m.title, m.questions)).join('')}
+    ${keyBlock(Q.final.title, Q.final.questions)}
+    <section class="card"><h3>Task examples</h3>${tasks}</section></div>`;
+}
+
+/* ---------- Router ---------- */
+function render(scroll){
+  const h = location.hash.replace(/^#\/?/, '');
+  const parts = h.split('/');
+  let html;
+  if (parts[0] === 'm' && parts[1]) html = module(+parts[1]);
+  else if (parts[0] === 'quiz' && parts[1]){
+    if (!qs || qs.key !== parts[1] || (qs.done && scroll)) startQuiz(parts[1]);
+    html = qs.done ? results() : quiz();
+  }
+  else if (parts[0] === 'key') html = key();
+  else html = home();
+  app.innerHTML = html;
+  initCardLab(); initContrastLab();
+  const dt = document.getElementById('demo-toggle');
+  if (dt) dt.addEventListener('click', () => {
+    const on = document.getElementById('demo').classList.toggle('on');
+    dt.textContent = on ? 'Remove hierarchy' : 'Add hierarchy';
+    dt.setAttribute('aria-pressed', on);
+  });
+  if (scroll) window.scrollTo(0, 0);
+  updateProgress();
+}
+window.addEventListener('hashchange', () => { if (C) render(true); });
+app.addEventListener('click', e => {
+  const t = e.target.closest('button'); if (!t || !qs) return;
+  if (t.dataset.opt !== undefined){
+    if (qs.mode === 'practice' && qs.ans[qs.i] !== null) return;
+    qs.ans[qs.i] = +t.dataset.opt; render(false);
+  } else if (t.hasAttribute('data-next')){
+    if (qs.i < qs.list.length-1) qs.i++; else finishQuiz();
+    render(true);
+  } else if (t.hasAttribute('data-prev')){ qs.i--; render(true); }
+  else if (t.hasAttribute('data-retry')){ startQuiz(qs.key); render(true); }
+});
+app.innerHTML = '<p class="muted">Loading course...</p>';
+Promise.all([fetch('data/curriculum.json').then(r => r.json()), fetch('data/quiz.json').then(r => r.json())])
+  .then(([c, q]) => { C = c; Q = q; render(true); })
+  .catch(() => { app.innerHTML = '<div class="card"><h3>Could not load the course</h3><p>The data files did not load. Open the site from its web address (not from a saved file) and check that the data folder is uploaded.</p></div>'; });
+})();
+</script>
+</body>
+</html>
