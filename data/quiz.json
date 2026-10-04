@@ -1,0 +1,329 @@
+{
+  "modules": [
+    {
+      "module_number": 1,
+      "title": "Visual Hierarchy & Spacing",
+      "questions": [
+        {
+          "q": "Which of these is NOT one of the main levers of visual hierarchy?",
+          "options": ["Size", "Whitespace", "Font licensing", "Contrast"],
+          "answer": 2,
+          "explanation": "The levers are size, weight, contrast, position and whitespace. Licensing has no visual effect."
+        },
+        {
+          "q": "Which spacing value sits on the 8pt grid?",
+          "options": ["12px", "20px", "24px", "30px"],
+          "answer": 2,
+          "explanation": "24 is 3 x 8. The others are not multiples of 8."
+        },
+        {
+          "q": "What is the recommended minimum touch target size on mobile?",
+          "options": ["24 x 24px", "32 x 32px", "44 x 44px", "64 x 64px"],
+          "answer": 2,
+          "explanation": "44 x 44px is large enough for most fingertips to tap reliably."
+        },
+        {
+          "q": "How should related elements be spaced compared with unrelated ones?",
+          "options": ["Farther apart", "Closer together", "The same distance apart", "Always separated by a divider line"],
+          "answer": 1,
+          "explanation": "Proximity signals relationship, so related items should sit closer together."
+        },
+        {
+          "q": "What does the squint test check?",
+          "options": [
+            "Whether the font is legible at small sizes",
+            "Whether the most important element still stands out when blurred",
+            "Whether the colors work for color-blind users",
+            "Whether the layout matches the grid"
+          ],
+          "answer": 1,
+          "explanation": "Blurring removes detail so only the hierarchy remains. The focal point should still be visible."
+        },
+        {
+          "q": "How many primary focal points should a screen ideally have?",
+          "options": ["One", "Three", "As many as possible", "None"],
+          "answer": 0,
+          "explanation": "Competing focal points weaken each other. Aim for one dominant element."
+        }
+      ]
+    },
+    {
+      "module_number": 2,
+      "title": "Typography",
+      "questions": [
+        {
+          "q": "How many typeface families are usually enough for an interface?",
+          "options": ["As many as possible", "One or two", "Five or six", "One per paragraph"],
+          "answer": 1,
+          "explanation": "Restraint keeps a design consistent. If you use two, make them clearly different."
+        },
+        {
+          "q": "A type scale uses a 1.25 ratio and starts at 16px. What is the next size up?",
+          "options": ["17px", "20px", "24px", "32px"],
+          "answer": 1,
+          "explanation": "16 x 1.25 = 20."
+        },
+        {
+          "q": "What is a comfortable line length for body text?",
+          "options": ["20 to 30 characters", "45 to 75 characters", "100 to 120 characters", "150 or more characters"],
+          "answer": 1,
+          "explanation": "45 to 75 characters lets the eye travel along a line and find the next one easily."
+        },
+        {
+          "q": "Which line height works well for body text?",
+          "options": ["1.0", "1.4 to 1.6", "2.5", "3.0"],
+          "answer": 1,
+          "explanation": "1.4 to 1.6 gives lines enough room without feeling disconnected."
+        },
+        {
+          "q": "What does x-height describe?",
+          "options": [
+            "The height of lowercase letters such as x, excluding ascenders",
+            "The distance between two lines of text",
+            "The thickness of a letter stroke",
+            "The space below the baseline"
+          ],
+          "answer": 0,
+          "explanation": "A larger x-height generally makes a typeface feel bigger and easier to read at small sizes."
+        },
+        {
+          "q": "What is the recommended minimum body text size on mobile?",
+          "options": ["10px", "12px", "16px", "24px"],
+          "answer": 2,
+          "explanation": "16px is a widely used floor for readable mobile body text."
+        }
+      ]
+    },
+    {
+      "module_number": 3,
+      "title": "Color Theory",
+      "questions": [
+        {
+          "q": "What do the letters in HSL stand for?",
+          "options": ["Hue, Saturation, Lightness", "Height, Shade, Light", "Hue, Shade, Layer", "Hex, Saturation, Luminance"],
+          "answer": 0,
+          "explanation": "HSL describes a color by its hue, how saturated it is and how light it is."
+        },
+        {
+          "q": "What does the 60-30-10 rule recommend?",
+          "options": [
+            "60% accent, 30% neutral, 10% secondary",
+            "60% secondary, 30% accent, 10% neutral",
+            "60% dominant neutral, 30% secondary, 10% accent",
+            "60% images, 30% text, 10% buttons"
+          ],
+          "answer": 2,
+          "explanation": "A calm dominant color, a supporting color and a small accent keep a layout balanced."
+        },
+        {
+          "q": "Colors that sit opposite each other on the color wheel are called:",
+          "options": ["Analogous", "Complementary", "Monochromatic", "Triadic"],
+          "answer": 1,
+          "explanation": "Complementary pairs, like blue and orange, create the strongest contrast of hue."
+        },
+        {
+          "q": "What contrast ratio does WCAG require for normal-size text?",
+          "options": ["2:1", "3:1", "4.5:1", "21:1"],
+          "answer": 2,
+          "explanation": "4.5:1 for normal text and 3:1 for large text is the AA level."
+        },
+        {
+          "q": "Why shouldn't color be the only way to show an error?",
+          "options": [
+            "Some users cannot tell certain colors apart",
+            "It makes the page print slowly",
+            "Red text loads slower",
+            "There is no reason, it is only a style choice"
+          ],
+          "answer": 0,
+          "explanation": "Color-blind and low-vision users may miss it. Add an icon or message as well."
+        },
+        {
+          "q": "Where is the accent color best used?",
+          "options": ["On primary actions", "On every card background", "On all body text", "On every border"],
+          "answer": 0,
+          "explanation": "Saving the accent for key actions makes those actions easy to find."
+        }
+      ]
+    },
+    {
+      "module_number": 4,
+      "title": "Wireframing & User Flow",
+      "questions": [
+        {
+          "q": "What do low-fidelity wireframes deliberately leave out?",
+          "options": ["Layout", "Content priority", "Final colors and brand styling", "Screen structure"],
+          "answer": 2,
+          "explanation": "Keeping style out forces you to solve structure and priority first."
+        },
+        {
+          "q": "In a user flow, which shape usually represents a yes/no decision?",
+          "options": ["Rectangle", "Diamond", "Circle", "Cloud"],
+          "answer": 1,
+          "explanation": "A diamond marks a branching decision such as 'Is the user logged in?'."
+        },
+        {
+          "q": "How many columns are commonly used for a mobile layout grid?",
+          "options": ["2", "4", "12", "24"],
+          "answer": 1,
+          "explanation": "4 columns is a common mobile pattern. Desktop usually uses 12."
+        },
+        {
+          "q": "Where is the thumb zone on a phone?",
+          "options": ["The top corners", "The lower middle of the screen", "Directly under the notch", "Behind the keyboard"],
+          "answer": 1,
+          "explanation": "That area is easiest to reach one-handed, so frequent actions belong there."
+        },
+        {
+          "q": "What is the 'happy path' in a user flow?",
+          "options": [
+            "The route where everything goes as expected",
+            "The path with the fewest colors",
+            "The route taken after an error",
+            "The longest possible route"
+          ],
+          "answer": 0,
+          "explanation": "Map the happy path first, then add error and edge cases."
+        },
+        {
+          "q": "Why start wireframing on paper before using a design tool?",
+          "options": [
+            "It is fast and cheap to change and keeps focus on structure",
+            "Design tools cannot draw boxes",
+            "Clients require paper sketches",
+            "Color is impossible to use digitally"
+          ],
+          "answer": 0,
+          "explanation": "Paper removes tool friction and temptation to polish too early."
+        }
+      ]
+    }
+  ],
+  "final": {
+    "title": "Final exam",
+    "questions": [
+      {
+        "q": "A screen has a headline, three buttons and a banner, all the same size, weight and color. What is the best first fix?",
+        "options": [
+          "Add more decorative elements",
+          "Make one element clearly dominant using size, weight or contrast",
+          "Make every element bolder",
+          "Shrink the whole screen"
+        ],
+        "answer": 1,
+        "explanation": "Hierarchy comes from difference. Choose one focal point and rank the rest below it."
+      },
+      {
+        "q": "The gap between a title and its body is 13px. Which is the nearest 8pt-grid value?",
+        "options": ["8px", "12px", "16px", "20px"],
+        "answer": 2,
+        "explanation": "13 is 3px from 16 and 5px from 8. The 8pt grid allows 8 and 16, so 16 is nearest."
+      },
+      {
+        "q": "A primary button is 36px tall on a phone. What is the problem?",
+        "options": [
+          "It is below the 44px touch target minimum",
+          "It is too accessible",
+          "36 is not a valid number",
+          "Nothing, buttons can be any size"
+        ],
+        "answer": 0,
+        "explanation": "Small targets cause mis-taps. Raise it to at least 44px."
+      },
+      {
+        "q": "A paragraph runs about 140 characters per line. What should you change?",
+        "options": [
+          "Increase the font weight",
+          "Narrow the text column to 45 to 75 characters",
+          "Switch to all caps",
+          "Remove the line height"
+        ],
+        "answer": 1,
+        "explanation": "Overly long lines make it hard to find the start of the next line."
+      },
+      {
+        "q": "Light grey text (#AAAAAA) sits on a white background. What is the likely issue?",
+        "options": [
+          "The contrast ratio is below 4.5:1",
+          "White backgrounds are not allowed",
+          "Grey is not a color",
+          "The text is too saturated"
+        ],
+        "answer": 0,
+        "explanation": "That pair is around 2.3:1, well below the 4.5:1 needed for normal text."
+      },
+      {
+        "q": "In a wellness app, where should the 10% accent color go?",
+        "options": ["The page background", "The main call-to-action button", "All body paragraphs", "Every icon and border"],
+        "answer": 1,
+        "explanation": "The accent is for the most important action so it stands out."
+      },
+      {
+        "q": "Why does this course teach hierarchy, type and color before tools?",
+        "options": [
+          "Tools are not important",
+          "Tools only execute decisions, and principles tell you which decisions to make",
+          "Tools are too expensive",
+          "Principles are quicker to learn"
+        ],
+        "answer": 1,
+        "explanation": "Knowing why something works lets you use any tool well."
+      },
+      {
+        "q": "On a form, labels sit nearer the previous field than their own field. What principle is broken and how do you fix it?",
+        "options": [
+          "Contrast. Make the labels bold.",
+          "Proximity. Move each label closer to its own field than to the previous one.",
+          "Typography. Use a new font.",
+          "Color. Make the labels red."
+        ],
+        "answer": 1,
+        "explanation": "Distance communicates relationship. Labels must visibly belong to their fields."
+      },
+      {
+        "q": "What belongs inside a decision diamond in a user flow?",
+        "options": [
+          "A screen mockup",
+          "A yes/no question such as 'Is the user logged in?'",
+          "The brand logo",
+          "A color palette"
+        ],
+        "answer": 1,
+        "explanation": "Diamonds branch the flow based on a condition."
+      },
+      {
+        "q": "Which font pairing approach is generally recommended?",
+        "options": [
+          "Two very similar serif faces",
+          "Two clearly different faces with distinct roles",
+          "Five faces for variety",
+          "A decorative face for all body text"
+        ],
+        "answer": 1,
+        "explanation": "Similar-but-not-identical faces look like a mistake. Clear contrast looks deliberate."
+      },
+      {
+        "q": "Which item belongs in a low-fi wireframe?",
+        "options": [
+          "A grey box labeled 'Image'",
+          "Final brand colors",
+          "Finished illustrations",
+          "Animation timing curves"
+        ],
+        "answer": 0,
+        "explanation": "Low-fi wireframes use labeled placeholders to focus on structure."
+      },
+      {
+        "q": "Why include an error path in a user flow?",
+        "options": [
+          "Because users will hit failures and you need to design how they recover",
+          "To make the diagram longer",
+          "Because error paths are decorative",
+          "It is only needed in desktop apps"
+        ],
+        "answer": 0,
+        "explanation": "Real journeys include failures. Planning recovery prevents dead ends."
+      }
+    ]
+  }
+}

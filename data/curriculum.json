@@ -1,0 +1,230 @@
+{
+  "course_title": "UI/UX Design Fundamentals",
+  "subtitle": "Learn to see, then learn the tools. Four weeks of principles first, wireframes last.",
+  "target_audience": "Complete beginners",
+  "delivery_format": "4-week self-paced workbook",
+  "modules": [
+    {
+      "module_number": 1,
+      "week": 1,
+      "title": "Visual Hierarchy & Spacing",
+      "summary": "Before color or type, learn how to guide the eye using size, contrast, position and space.",
+      "lab": "card_lab",
+      "lessons": [
+        {
+          "id": "1.1",
+          "title": "What is visual hierarchy?",
+          "concepts": [
+            "Visual hierarchy is how a design tells your eyes what to look at first, second and third.",
+            "You control it with five levers: size (bigger is noticed first), weight (bolder is noticed first), contrast (stronger difference stands out), position (top and left are seen first) and whitespace (empty space around something makes it stand out).",
+            "Each screen needs one clear focal point, the one thing you most want people to notice. If two things shout, nothing is heard.",
+            "The squint test: squint or blur your eyes at a design. The most important thing should still stand out."
+          ],
+          "takeaway": "Make one thing clearly dominant, then rank everything else beneath it.",
+          "example": "Look at any app's home screen. Squint. What is the first thing you see? That is its hierarchy at work."
+        },
+        {
+          "id": "1.2",
+          "title": "The 8pt spatial system",
+          "concepts": [
+            "Spacing in digital design is measured in pixels (px), the tiny dots that make up a screen.",
+            "The 8pt system means you only use spacing in multiples of 8: 8, 16, 24, 32, 48, 64. Never 13 or 22.",
+            "Padding is the empty space inside a box, between its edge and its content. Keep padding on the 8 multiples too.",
+            "A touch target is the area a finger can tap. Make buttons at least 44 x 44px so they are easy to hit on a phone.",
+            "Using the same few spacing numbers everywhere makes a layout feel neat and intentional."
+          ],
+          "takeaway": "Pick spacing from a small fixed set and never eyeball a number like 13px.",
+          "example": "Instead of guessing a gap of 13px, choose 8 or 16. Pick the one that looks right."
+        },
+        {
+          "id": "1.3",
+          "title": "Proximity, grouping and alignment",
+          "concepts": [
+            "Proximity means closeness. Things that are close together look related.",
+            "Put less space inside a group than between groups. A label should sit nearer to its own input than to the one above.",
+            "Alignment means lining things up on a shared edge. Left-align most text because it is easiest to read.",
+            "Fewer alignment lines means a calmer, tidier layout."
+          ],
+          "takeaway": "Distance communicates relationship. Use gaps to show what belongs together.",
+          "example": "In a contact form, keep each label and its box close together, then leave a bigger gap before the next label."
+        }
+      ]
+    },
+    {
+      "module_number": 2,
+      "week": 2,
+      "title": "Typography",
+      "summary": "Type is most of an interface. Learn to choose, scale and set it so it reads easily.",
+      "lab": null,
+      "lessons": [
+        {
+          "id": "2.1",
+          "title": "Anatomy and choosing typefaces",
+          "concepts": [
+            "Typography is the art of choosing and arranging text. A typeface (or font family) is a style of lettering, like Arial or Georgia.",
+            "Serif fonts have small strokes on the ends of letters. Sans-serif fonts do not.",
+            "Know a few parts: the baseline is the line letters sit on, the x-height is the height of lowercase letters like x, ascenders go up (like h) and descenders go down (like g).",
+            "Use one or two typefaces. If you use two, make them clearly different, such as a bold headline face and a plain reading face.",
+            "Save decorative fonts for short headlines, never for body text."
+          ],
+          "takeaway": "Restraint beats variety. One well-chosen family can carry a whole product.",
+          "example": "Pick one clean sans-serif and use it everywhere. Notice how consistent the page already feels."
+        },
+        {
+          "id": "2.2",
+          "title": "Type scale and weight",
+          "concepts": [
+            "A type scale is a set of text sizes that grow by the same ratio. With a ratio of 1.25 starting at 16px you get 16, 20, 25, 31, 39.",
+            "To find the next size, multiply by the ratio: 16 x 1.25 = 20.",
+            "Headings should be clearly bigger or bolder than body text, so people can scan.",
+            "Weight means how thick the letters are. Use only two or three weights, like regular and bold.",
+            "Body text on a phone should be at least 16px."
+          ],
+          "takeaway": "Choose sizes from a scale so each step is clearly different from the last.",
+          "example": "Set a headline at 31px, a subheading at 20px and body at 16px. The steps are easy to tell apart."
+        },
+        {
+          "id": "2.3",
+          "title": "Readability",
+          "concepts": [
+            "Readability is how easily people can read text without effort.",
+            "Line length is how many characters fit on one line. Aim for 45 to 75.",
+            "Line height is the space between lines. Use about 1.4 to 1.6 times the font size for paragraphs.",
+            "Left-align paragraphs and avoid long passages in ALL CAPS, which is slower to read.",
+            "Text needs strong contrast against its background, such as dark text on a light page."
+          ],
+          "takeaway": "If people have to work to read it, the type has failed.",
+          "example": "Copy a paragraph into a narrow column and a very wide one. Which one is easier to read?"
+        }
+      ]
+    },
+    {
+      "module_number": 3,
+      "week": 3,
+      "title": "Color Theory",
+      "summary": "Use color on purpose: to build palettes, signal actions and stay accessible.",
+      "lab": "contrast_lab",
+      "lessons": [
+        {
+          "id": "3.1",
+          "title": "Hue, saturation and lightness",
+          "concepts": [
+            "Every color has three properties. Hue is which color it is (red, blue, green). Saturation is how intense or vivid it is. Lightness is how light or dark it is.",
+            "This model is called HSL. It is easier to tweak than hex codes like #2B50E6.",
+            "Neutrals are greys, near-white and near-black. Most of an interface is neutral.",
+            "A big difference in lightness makes text readable far more reliably than a different hue."
+          ],
+          "takeaway": "Adjust lightness first. It does the most for readability and hierarchy.",
+          "example": "Take any color and only change its lightness. You will see a whole family of shades from one hue."
+        },
+        {
+          "id": "3.2",
+          "title": "Palettes and the 60-30-10 rule",
+          "concepts": [
+            "A palette is the small set of colors a design uses.",
+            "Common schemes: monochromatic (one hue, many shades), analogous (neighbors on the color wheel), complementary (opposites on the wheel) and triadic (three evenly spaced).",
+            "The 60-30-10 rule: 60% dominant neutral, 30% secondary color, 10% accent.",
+            "Use the accent only for the most important actions, like the main button.",
+            "If everything is colorful, nothing stands out."
+          ],
+          "takeaway": "A small, disciplined palette with one accent beats a rainbow.",
+          "example": "A mostly white page, grey cards and one blue button follows the rule: the blue button is what you notice."
+        },
+        {
+          "id": "3.3",
+          "title": "Contrast, accessibility and meaning",
+          "concepts": [
+            "Contrast ratio is a number comparing how light the text is against its background. Higher is easier to read.",
+            "WCAG is the standard set of web accessibility guidelines. It asks for at least 4.5:1 for normal text and 3:1 for large text.",
+            "Never use color as the only signal. Add an icon or words too, because some people cannot tell certain colors apart.",
+            "Colors carry meaning: red often means error, green means success. The meaning can differ between cultures.",
+            "Check your colors with a contrast checker before you commit. There is one in this module."
+          ],
+          "takeaway": "Beautiful but unreadable is not finished.",
+          "example": "Light grey text on white looks stylish but is often too faint. Test it in the checker below."
+        }
+      ]
+    },
+    {
+      "module_number": 4,
+      "week": 4,
+      "title": "Wireframing & User Flow",
+      "summary": "Only now do you pick up tools. Plan layout and journeys in grayscale first.",
+      "lab": null,
+      "lessons": [
+        {
+          "id": "4.1",
+          "title": "Low-fidelity wireframes",
+          "concepts": [
+            "A wireframe is a simple, plain drawing of a screen that shows where things go, like a house floor plan.",
+            "Low-fidelity (low-fi) means rough and quick: grey boxes and short placeholder text.",
+            "Leave out final colors, fonts and pictures on purpose, so you can focus on structure and what matters most.",
+            "Label image boxes with the word 'Image' and use short fake text for content.",
+            "Start on paper. It is fast, free and easy to redo."
+          ],
+          "takeaway": "Solve layout before style. Decoration cannot rescue a confusing structure.",
+          "example": "Sketch your favorite app's main screen using only rectangles and labels."
+        },
+        {
+          "id": "4.2",
+          "title": "Layout and grids",
+          "concepts": [
+            "A grid is an invisible set of columns that lines up your content. Phones commonly use 4 columns. Desktop screens commonly use 12.",
+            "Margins are the empty edges of the page. Gutters are the gaps between columns.",
+            "The thumb zone is the lower middle of a phone screen that your thumb reaches easily. Put frequent actions there.",
+            "People scan pages in patterns. The F-pattern (across the top, then down the left) and Z-pattern (a Z shape) show where to place key content."
+          ],
+          "takeaway": "A grid gives every element a home, and your 8pt spacing keeps it tidy.",
+          "example": "Hold your phone in one hand. Which parts of the screen can your thumb reach without stretching?"
+        },
+        {
+          "id": "4.3",
+          "title": "User flows",
+          "concepts": [
+            "A user flow is a diagram of the steps a person takes to finish one goal, like saving a recipe.",
+            "Shapes mean things: a rounded shape for start and end, a rectangle for a step or screen, and a diamond for a yes or no decision.",
+            "The happy path is the route where everything goes right. Draw it first.",
+            "Then add error and edge-case paths, such as what happens when there is no internet.",
+            "Each flow should serve one goal."
+          ],
+          "takeaway": "Designing the journey is as important as designing the screens.",
+          "example": "Draw the steps for ordering a pizza: open app, pick pizza, pay. Then add what happens if payment fails."
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "T1",
+      "module_number": 1,
+      "title": "Card hierarchy lab",
+      "objective": "Build a card with a title, body text and a primary button that passes every hierarchy rule.",
+      "constraints": "Title font larger than body. Order is title, body, button from top to bottom. Gap between title and body is a multiple of 8. Button is at least 44px tall.",
+      "exemplar": "Title 24px, body 16px, 16px gap, 48px button, stacked title, body, button."
+    },
+    {
+      "task_id": "T2",
+      "module_number": 2,
+      "title": "Type specimen page",
+      "objective": "Design a one-page specimen that shows a five-step type scale in use.",
+      "constraints": "Maximum two families. Use one consistent ratio. Body at least 16px. Paragraph line length between 45 and 75 characters.",
+      "exemplar": "Scale of 16, 20, 25, 31, 39 using one family at two weights, body line height 1.5, column about 60 characters wide."
+    },
+    {
+      "task_id": "T3",
+      "module_number": 3,
+      "title": "Palette and contrast audit",
+      "objective": "Create a 60-30-10 palette for a small app and test four text and background pairs.",
+      "constraints": "Every body text pair reaches 4.5:1. The accent color appears only on primary actions. Error states use an icon or text as well as color.",
+      "exemplar": "Light neutral background (60), mid-tone surface (30), one saturated accent for the main button (10), all pairs verified in the contrast checker."
+    },
+    {
+      "task_id": "T4",
+      "module_number": 4,
+      "title": "Capstone: wireframes and flow",
+      "objective": "Pick a simple app, such as a recipe saver, and produce three low-fi screens plus one user flow.",
+      "constraints": "Grayscale only. Spacing follows the 8pt system. One primary action per screen. The flow includes at least one error or edge-case path.",
+      "exemplar": "Three screens (browse, recipe detail, save confirmation), one flow from open app to saved recipe with a 'no connection' branch."
+    }
+  ]
+}
