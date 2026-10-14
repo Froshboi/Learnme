@@ -197,6 +197,48 @@
           "explanation": "Paper removes tool friction and temptation to polish too early."
         }
       ]
+    },
+    {
+      "module_number": 5,
+      "title": "Accessibility & Usability Testing",
+      "questions": [
+        {
+          "q": "What do the four WCAG principles spell out?",
+          "options": ["Perceivable, operable, understandable, robust", "Practical, open, useful, readable", "People, outcomes, wireframes, research", "Perceivable, organized, universal, responsive"],
+          "answer": 0,
+          "explanation": "POUR means perceivable, operable, understandable and robust."
+        },
+        {
+          "q": "Which task is best for a usability test?",
+          "options": ["Click the bookmark icon", "Save this article so you can find it again", "Press the blue button in the corner", "Tell me if you like this page"],
+          "answer": 1,
+          "explanation": "A neutral task describes the user's goal without revealing the interface or leading to an opinion."
+        },
+        {
+          "q": "A participant gets stuck. What is the best moderator response?",
+          "options": ["Point at the right control", "Ask what they are expecting to happen", "Finish the task for them", "Tell them the design is simple"],
+          "answer": 1,
+          "explanation": "An open, neutral prompt reveals the participant's mental model without giving away the answer."
+        },
+        {
+          "q": "Which is the strongest measure of task success?",
+          "options": ["The participant says the screen looks nice", "The participant completes the task without help", "The moderator likes the design", "The participant clicks many controls"],
+          "answer": 1,
+          "explanation": "Task completion without help is observable and tied directly to the user's goal."
+        },
+        {
+          "q": "What can five participants in a moderated test tell you?",
+          "options": ["A statistically representative result for every user", "Common usability problems worth investigating", "Which design every person will prefer", "The exact market share of your product"],
+          "answer": 1,
+          "explanation": "A small round can expose recurring usability issues, but it is not a statistically representative survey."
+        },
+        {
+          "q": "What should you do after changing a design to fix a usability issue?",
+          "options": ["Assume the fix worked", "Retest the task and check for new barriers", "Delete the original findings", "Add more decoration"],
+          "answer": 1,
+          "explanation": "Retesting checks whether the change solved the problem without creating another barrier."
+        }
+      ]
     }
   ],
   "final": {
@@ -323,6 +365,42 @@
         ],
         "answer": 0,
         "explanation": "Real journeys include failures. Planning recovery prevents dead ends."
+      },
+      {
+        "q": "A form shows an error only with a red border. What is the most accessible improvement?",
+        "options": ["Make the red brighter", "Add a clear message or icon as well as color", "Hide the error after one second", "Use a different font"],
+        "answer": 1,
+        "explanation": "Color alone is not perceivable by everyone. Pair it with text or another visual cue."
+      },
+      {
+        "q": "Which moderator prompt is least likely to lead a participant?",
+        "options": ["Click the blue button now", "The menu is at the top", "What are you expecting to happen here?", "This step is easy, right?"],
+        "answer": 2,
+        "explanation": "Open questions let participants describe their expectations without a hint or judgment."
+      },
+      {
+        "q": "Which usability finding is most actionable?",
+        "options": ["People hate the checkout", "Three of five participants needed help finding the delivery options", "The page feels bad", "Users are confused"],
+        "answer": 1,
+        "explanation": "A specific observation with frequency and evidence is easier to verify and improve."
+      },
+      {
+        "q": "Why include keyboard-only and screen-reader users in testing?",
+        "options": ["To make testing take longer", "To find barriers that visual or mouse-only checks can miss", "Because automated tools test everything else", "Only to validate the colors"],
+        "answer": 1,
+        "explanation": "People using different input methods and assistive technology can uncover barriers other tests miss."
+      },
+      {
+        "q": "What is the best way to handle participant information?",
+        "options": ["Collect everything in case it is useful", "Get consent and only keep information needed for the study", "Share recordings publicly", "Skip consent for short sessions"],
+        "answer": 1,
+        "explanation": "Respectful research gets consent and protects people's personal information."
+      },
+      {
+        "q": "How should a team prioritize a usability issue?",
+        "options": ["Fix the easiest issue first every time", "Consider user impact and how often it happens", "Choose the one with the brightest color", "Wait until every participant agrees"],
+        "answer": 1,
+        "explanation": "Prioritizing impact and frequency helps teams focus on meaningful barriers."
       }
     ]
   }

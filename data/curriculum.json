@@ -1,8 +1,8 @@
 {
   "course_title": "UI/UX Design Fundamentals",
-  "subtitle": "Learn to see, then learn the tools. Four weeks of principles first, wireframes last.",
+  "subtitle": "Learn to see, then learn the tools. Five weeks of design principles, accessible interfaces, and hands-on practice.",
   "target_audience": "Complete beginners",
-  "delivery_format": "4-week self-paced workbook",
+  "delivery_format": "5-week self-paced course and interactive studio",
   "modules": [
     {
       "module_number": 1,
@@ -191,6 +191,67 @@
           "example": "Draw the steps for ordering a pizza: open app, pick pizza, pay. Then add what happens if payment fails."
         }
       ]
+    },
+    {
+      "module_number": 5,
+      "week": 5,
+      "title": "Accessibility & Usability Testing",
+      "summary": "Design for different ways of seeing and interacting, then test real tasks with real people.",
+      "lab": "test_plan_lab",
+      "lessons": [
+        {
+          "id": "5.1",
+          "title": "Accessibility is part of the design",
+          "concepts": [
+            "Accessibility means people with different abilities can perceive, understand, navigate and use a product.",
+            "WCAG groups its guidance around four ideas: perceivable, operable, understandable and robust (POUR).",
+            "Use semantic headings and labels, visible keyboard focus and descriptive button names so assistive technology can explain the interface.",
+            "Never rely on color alone to communicate meaning. Pair it with text, shape or an icon.",
+            "Automated checkers find some issues, but they cannot replace keyboard, screen-reader and human checks."
+          ],
+          "takeaway": "Build access into every design decision, then verify it with people and tools.",
+          "example": "Try reaching every control on a page using only the Tab, Enter and Space keys."
+        },
+        {
+          "id": "5.2",
+          "title": "Plan a fair usability test",
+          "concepts": [
+            "A usability test watches representative people try realistic tasks; it tests the design, not the participant.",
+            "Write a neutral task around a user's goal, not a list of buttons to press.",
+            "Ask open questions such as 'What are you expecting to happen?' Avoid hints that reveal the answer.",
+            "With five participants, a small moderated round can reveal common friction; it is not a statistically representative survey.",
+            "Get consent, protect personal information and provide an accessible way to participate."
+          ],
+          "takeaway": "Give people a goal, stay neutral and observe what actually happens.",
+          "example": "Instead of 'Click the bookmark', ask 'Save this article so you can find it again.'"
+        },
+        {
+          "id": "5.3",
+          "title": "Measure what people can do",
+          "concepts": [
+            "Choose an observable measure before a session, such as task completion, time, errors or help needed.",
+            "Record what happened and what the participant said separately from your interpretation of why.",
+            "A leading prompt or a success definition such as 'they seemed happy' makes findings less reliable.",
+            "Note the task, context, impact and frequency for each issue so the team can act on the evidence.",
+            "Use a small set of sessions to find problems, then retest important changes."
+          ],
+          "takeaway": "Evidence beats assumptions: define success, observe, record, then improve.",
+          "example": "Record 'needed two hints to finish checkout' rather than 'didn't like checkout'."
+        },
+        {
+          "id": "5.4",
+          "title": "Prioritize findings and iterate",
+          "concepts": [
+            "A finding should name the barrier, who it affects and the evidence that exposed it.",
+            "Prioritize issues by user impact and how often they occur, not by how easy they are to fix.",
+            "Fixing a barrier for keyboard or screen-reader users often improves clarity for everyone.",
+            "After changing the interface, rerun the same task to check that the fix worked and did not add a new barrier.",
+            "Share findings in a short, respectful report with clear next steps, not blame."
+          ],
+          "takeaway": "Test, learn, make a focused change, and test again.",
+          "example": "If three of five people miss a link, improve its label and focus state, then repeat the task."
+        }
+      ]
     }
   ],
   "tasks": [
@@ -225,6 +286,14 @@
       "objective": "Pick a simple app, such as a recipe saver, and produce three low-fi screens plus one user flow.",
       "constraints": "Grayscale only. Spacing follows the 8pt system. One primary action per screen. The flow includes at least one error or edge-case path.",
       "exemplar": "Three screens (browse, recipe detail, save confirmation), one flow from open app to saved recipe with a 'no connection' branch."
+    },
+    {
+      "task_id": "T5",
+      "module_number": 5,
+      "title": "Accessible usability test plan",
+      "objective": "Write a short, inclusive usability test plan for a real user goal and score it in the workbench.",
+      "constraints": "Use a neutral, goal-based task; define observable success; avoid leading prompts; plan a first round of 5–8 participants; consider varied access needs.",
+      "exemplar": "Ask 5 participants to save an article they want to revisit, record whether they complete it without help, use a neutral think-aloud prompt, and include keyboard and screen-reader users."
     }
   ]
 }

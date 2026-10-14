@@ -3,7 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>UI/UX Design Fundamentals</title>
+<meta name="theme-color" content="#f2f4f8">
+<meta name="description" content="A friendly, hands-on UI/UX design course with guided lessons, interactive studios, quizzes, and score-based practice.">
+<title>Learnme — UI/UX Design Studio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -216,15 +218,80 @@ button,input,select{font:inherit;color:inherit}
 .ns .dim{color:var(--line)}
 .confetti{position:fixed;inset:0;pointer-events:none;z-index:50}
 @media (prefers-reduced-motion:reduce){.nd.cur,.stars span.on{animation:none}}
+
+/* ---------- Learner dashboard refresh ---------- */
+:root{--accent:#3158e8;--accent-soft:#e9edff;--bg:#f6f7fb}
+:root[data-theme="dark"]{--accent:#9aafff;--accent-soft:#202b50;--bg:#0c1220}
+body{background:radial-gradient(ellipse at 50% -24%,rgba(49,88,232,.1),transparent 55%),var(--bg)}
+.top{background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.top-in{max-width:1160px;padding:12px 28px;gap:20px}
+.brand{font-size:19px;letter-spacing:-.03em}
+.navlink{padding:0 12px;border-radius:999px;background:var(--accent-soft);white-space:nowrap}
+.theme-toggle{width:44px;height:44px;flex:none;border:1px solid var(--line);border-radius:50%;background:var(--surface);cursor:pointer;font-size:19px}
+.wrap{max-width:1160px;padding:40px 28px 88px}
+.stack>*+*{margin-top:28px}
+.row{transition:transform .2s,border-color .2s,box-shadow .2s}
+.row:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(25,38,75,.08)}
+.home-stack{gap:26px}
+.home-hero{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(240px,.75fr);gap:28px;align-items:center;background:linear-gradient(130deg,var(--surface) 40%,var(--accent-soft));border:1px solid var(--line);border-radius:28px;padding:clamp(26px,5vw,56px)}
+.home-hero>*{min-width:0}
+.home-hero:after{content:"";position:absolute;width:240px;height:240px;right:-66px;top:-112px;border:1px solid color-mix(in srgb,var(--accent) 28%,transparent);border-radius:50%;box-shadow:0 0 0 24px color-mix(in srgb,var(--accent) 5%,transparent),0 0 0 48px color-mix(in srgb,var(--accent) 4%,transparent);pointer-events:none}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.home-hero h1{max-width:13ch;font-size:clamp(42px,6vw,70px)}
+.home-hero p{font-size:18px;max-width:49ch;margin:16px 0 24px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.hero-side{position:relative;z-index:1;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:22px}
+.hero-score{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.hero-score strong{font-family:var(--display);font-size:44px;line-height:1}
+.dash-progress{height:12px;margin:18px 0 8px;background:var(--line);border-radius:999px;overflow:hidden}
+.dash-progress span{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--accent),#41b89a);transition:width .5s}
+.dash-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dash-stat{padding:16px;background:var(--surface);border:1px solid var(--line);border-radius:16px}
+.dash-stat b{display:block;font:700 27px/1.1 var(--display)}
+.dash-stat span{display:block;margin-top:5px}
+.section-heading{display:flex;align-items:end;justify-content:space-between;gap:16px}
+.section-heading h2{font-size:clamp(25px,4vw,32px)}
+.module-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.module-card{display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:center;min-height:112px;padding:18px;background:var(--surface);border:1px solid var(--line);border-radius:18px;text-decoration:none;color:var(--ink);transition:transform .2s,border-color .2s,box-shadow .2s}
+.module-card:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 10px 30px rgba(25,38,75,.08)}
+.module-num{width:44px;height:44px;display:grid;place-items:center;border-radius:14px;background:var(--accent-soft);color:var(--accent);font:700 18px var(--display)}
+.module-card.complete .module-num{background:var(--ok-soft);color:var(--ok)}
+.module-title{font:700 18px/1.2 var(--display)}
+.module-meta{font-size:14px;color:var(--muted);margin-top:5px}
+.module-score{padding:7px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:13px;font-weight:700;white-space:nowrap}
+.module-card.complete .module-score{background:var(--ok-soft);color:var(--ok)}
+.home-lower{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
+.home-panel{padding:22px;background:var(--surface);border:1px solid var(--line);border-radius:20px}
+.home-panel h3{margin-bottom:10px}
+.studio-banner{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:16px;padding:16px;background:var(--accent-soft);border-radius:14px;text-decoration:none;color:var(--ink)}
+.studio-banner strong{display:block;font:700 18px var(--display)}
+.studio-banner .pill{background:var(--surface)}
+.notice{max-width:1160px;margin:0 auto;padding:8px 28px;color:var(--bad);font-size:14px}
+.test-plan{display:grid;gap:14px}
+.test-field{display:grid;gap:6px}
+.test-field label{font-weight:600;font-size:15px}
+.test-field select,.test-field input{width:100%;min-height:48px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.plan-score{display:flex;align-items:center;gap:14px;margin-top:4px;padding:16px;border-radius:14px;background:var(--accent-soft)}
+.plan-score strong{font:800 32px/1 var(--display);color:var(--accent)}
+.plan-feedback{list-style:none;padding:0;margin:0}
+.plan-feedback li{padding:8px 0;border-bottom:1px solid var(--line)}
+.plan-feedback li:last-child{border-bottom:0}
+.plan-feedback .pass{color:var(--ok)}.plan-feedback .improve{color:var(--bad)}
+@media(max-width:760px){.top-in{padding:10px 16px;gap:10px}.wrap{padding:26px 16px 64px}.home-hero{grid-template-columns:1fr}.hero-side{max-width:480px}.home-lower{grid-template-columns:1fr}.notice{padding:8px 16px}}
+@media(max-width:560px){.top-in{gap:8px}.brand{font-size:16px}.navlink{font-size:14px;padding:0 10px}.prog-label{font-size:12px}.module-grid{grid-template-columns:1fr}.module-card{min-height:96px;padding:14px}.home-hero{padding:24px 20px}.home-hero .eyebrow{letter-spacing:.08em}.hero-side{padding:18px}.dash-stats{gap:8px}.dash-stat{padding:12px}.dash-stat b{font-size:23px}.section-heading{align-items:start;flex-direction:column}}
+@media(max-width:380px){.top-in{padding:10px 12px;gap:6px}.brand{font-size:14px}.navlink{font-size:13px;padding:0 8px}.prog-label{font-size:11px}.theme-toggle{width:40px;height:40px}.hero-actions{align-items:stretch;flex-direction:column}.hero-actions .btn{width:100%;padding:0 12px;white-space:normal;text-align:center}}
+@media(min-width:760px){.test-plan{grid-template-columns:repeat(2,minmax(0,1fr))}.plan-score,.plan-feedback{grid-column:1/-1}}
 </style>
 </head>
 <body>
 <header class="top"><div class="top-in">
-  <a class="brand" href="#/">UI/UX Foundations</a>
-  <a class="navlink" href="#/studio">Studio</a>
-  <div class="prog" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progbar"><span id="progfill"></span></div>
+  <a class="brand" href="#/">Learnme <span style="color:var(--accent)">/</span> Studio</a>
+  <a class="navlink" href="#/studio" aria-label="Practice studio">Studio</a>
+  <div class="prog" role="progressbar" aria-label="Course milestones" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progbar"><span id="progfill"></span></div>
   <span class="prog-label" id="proglabel">0%</span>
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">☾</button>
 </div></header>
+<div class="notice" id="storage-notice" role="status" hidden></div>
 <main class="wrap" id="app"></main>
 
 <script>
@@ -233,8 +300,27 @@ let C, Q;
 const app = document.getElementById('app');
 const KEY = 'uiux-course-v1';
 let store = {quiz:{}, final:null};
-try { const s = localStorage.getItem(KEY); if (s) store = Object.assign(store, JSON.parse(s)); } catch(e){}
-function save(){ try { localStorage.setItem(KEY, JSON.stringify(store)); } catch(e){} }
+function warnStorage(){
+  const notice = document.getElementById('storage-notice');
+  if (notice){ notice.hidden = false; notice.textContent = 'Your browser could not save progress or workspace drafts. Check that site storage is enabled; your work may not be here next time.'; }
+}
+try { const s = localStorage.getItem(KEY); if (s) store = Object.assign(store, JSON.parse(s)); } catch(e){ warnStorage(); }
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(store)); } catch(e){ warnStorage(); } }
+const themeButton = document.getElementById('theme-toggle');
+function updateThemeButton(){
+  const dark = document.documentElement.dataset.theme === 'dark' || (!document.documentElement.dataset.theme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  themeButton.textContent = dark ? '☼' : '☾';
+  themeButton.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');
+  themeButton.setAttribute('aria-pressed',String(dark));
+}
+try { const theme = localStorage.getItem('uiux-theme'); if (theme==='light'||theme==='dark') document.documentElement.dataset.theme = theme; } catch(e){ warnStorage(); }
+updateThemeButton();
+themeButton.addEventListener('click', () => {
+  const dark = document.documentElement.dataset.theme === 'dark' || (!document.documentElement.dataset.theme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  document.documentElement.dataset.theme = dark ? 'light' : 'dark';
+  updateThemeButton();
+  try { localStorage.setItem('uiux-theme',document.documentElement.dataset.theme); } catch(e){ warnStorage(); }
+});
 const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 const L = 'ABCD';
 const modQ = n => Q.modules.find(m => m.module_number === n);
@@ -242,7 +328,7 @@ const modC = n => C.modules.find(m => m.module_number === n);
 
 function updateProgress(){
   const total = C.modules.length + 1;
-  const done = Object.keys(store.quiz).length + (store.final ? 1 : 0);
+  const done = C.modules.filter(m => store.quiz[m.module_number]).length + (store.final ? 1 : 0);
   const pct = Math.round(done / total * 100);
   document.getElementById('progfill').style.width = pct + '%';
   document.getElementById('progbar').setAttribute('aria-valuenow', pct);
@@ -251,44 +337,85 @@ function updateProgress(){
 
 /* ---------- Home ---------- */
 function home(){
-  const rows = C.modules.map(m => {
+  const rows = C.modules.map((m,i) => {
     const r = store.quiz[m.module_number];
-    return `<a class="row" href="#/m/${m.module_number}">
-      <div><div class="row-title">${esc(m.title)}</div>
-      <div class="muted small">Week ${m.week}, ${m.lessons.length} lessons</div></div>
-      <span class="pill ${r?'done':''}">${r ? 'Quiz '+r.score+'/'+r.total : 'Start'}</span></a>`;
+    const pct = r ? Math.round((r.bestScore??r.score)/r.total*100) : null;
+    return `<a class="module-card ${r?'complete':''}" href="#/m/${m.module_number}">
+      <span class="module-num">${r?'✓':String(i+1).padStart(2,'0')}</span>
+      <span><span class="module-title">${esc(m.title)}</span>
+      <span class="module-meta">Week ${m.week} · ${m.lessons.length} short lessons</span></span>
+      <span class="module-score">${r ? (pct>=80?'✓ ':'')+pct+'%' : 'Explore'}</span></a>`;
   }).join('');
-  const f = store.final;
-  return `<div class="stack">
-    <div>
-      <h1>${esc(C.course_title)}</h1>
-      <p class="muted" style="margin-top:12px;max-width:46ch">${esc(C.subtitle)}</p>
-    </div>
-    <div class="demo">
-      <div class="demo-card" id="demo" aria-live="polite">
-        <div class="d-title">Weekend market</div>
-        <div class="d-body">Fresh produce, live music and street food every Saturday morning.</div>
-        <span class="d-btn">Get tickets</span>
+  const f = store.final, completed = C.modules.filter(m => store.quiz[m.module_number]).length;
+  const quizResults = Object.values(store.quiz).filter(r => r && r.total>0);
+  const avg = quizResults.length ? Math.round(quizResults.reduce((sum,r) => sum+(r.bestScore ?? r.score)/r.total*100,0)/quizResults.length) : null;
+  const done = completed + (f?1:0), total = C.modules.length+1, pct = Math.round(done/total*100);
+  const next = C.modules.find(m => !store.quiz[m.module_number]);
+  const nextHref = next ? '#/m/'+next.module_number : (!f ? '#/quiz/final' : '#/studio');
+  const nextLabel = next ? (completed ? 'Pick up where you left off' : 'Start learning') : (!f ? 'Take your final exam' : 'Keep practicing');
+  const nextTitle = next ? 'Week '+next.week+': '+next.title : (!f ? Q.final.title : 'Hands-on Studio');
+  const studio = studioStats();
+  return `<div class="stack home-stack">
+    <section class="home-hero" aria-labelledby="welcome-title">
+      <div><div class="eyebrow">Your design journey · ${C.modules.length} weeks · beginner friendly</div>
+        <h1 id="welcome-title">Learn to design with confidence.</h1>
+        <p class="muted">Build real UI/UX skills in small steps: understand the principles, practice in a safe space, then prove what you know.</p>
+        <div class="hero-actions"><a class="btn" href="${nextHref}">${nextLabel} <span aria-hidden="true">&nbsp;→</span></a>
+        <span class="muted small">${esc(nextTitle)}</span></div></div>
+      <aside class="hero-side" aria-label="Course progress summary">
+        <div class="hero-score"><div><div class="eyebrow">Course progress</div><strong>${pct}%</strong></div>
+          <span class="pill ${pct===100?'done':''}">${done}/${total} checkpoints</span></div>
+        <div class="dash-progress" role="progressbar" aria-label="Course milestones" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100"><span style="width:${pct}%"></span></div>
+        <p class="muted small">${pct===100?'Course complete. Keep sharpening your skills in the studio.':(total-done)+' course '+((total-done)===1?'checkpoint':'checkpoints')+' left · '+(C.modules.length-completed)+' week '+((C.modules.length-completed)===1?'quiz':'quizzes')+' and '+(f?'final complete':'final exam')}</p>
+      </aside>
+    </section>
+    <section class="dash-stats" aria-label="Learning stats">
+      <div class="dash-stat"><b>${completed}/${C.modules.length}</b><span class="muted small">week quizzes</span></div>
+      <div class="dash-stat"><b>${avg===null?'—':avg+'%'}</b><span class="muted small">quiz average</span></div>
+      <div class="dash-stat"><b>${studio.done}/${EX.length}</b><span class="muted small">studio challenges</span></div>
+    </section>
+    <section aria-labelledby="path-title">
+      <div class="section-heading"><div><div class="eyebrow">The learning path</div><h2 id="path-title">One good step at a time</h2></div>
+        <span class="muted small">${Q.final.questions.length} final questions · instant quiz feedback</span></div>
+      <div class="module-grid" style="margin-top:16px">${rows}
+        <a class="module-card ${f?'complete':''}" href="#/quiz/final"><span class="module-num">${f?'✓':'★'}</span>
+          <span><span class="module-title">${esc(Q.final.title)}</span>
+          <span class="module-meta">${Q.final.questions.length} questions · all ${C.modules.length} weeks</span></span>
+          <span class="module-score">${f?Math.round((f.bestScore??f.score)/f.total*100)+'%':'Ready'}</span></a>
       </div>
-      <div><button class="btn ghost" id="demo-toggle" aria-pressed="false">Add hierarchy</button></div>
-      <p class="muted small">Same words, same card. Only size, weight, color and space changed. That is the whole first week.</p>
-    </div>
-    <h2>Part 2: Hands-on Studio</h2>
-    <div>${studioTeaser()}</div>
-    <h2>Part 1: Your four weeks</h2>
-    <div class="stack" style="--g:12px">${rows}
-      <a class="row" href="#/quiz/final"><div><div class="row-title">${esc(Q.final.title)}</div>
-        <div class="muted small">${Q.final.questions.length} questions across all four modules</div></div>
-        <span class="pill ${f?'done':''}">${f ? f.score+'/'+f.total : 'Start'}</span></a>
-      <a class="row" href="#/key"><div><div class="row-title">Answer key</div>
-        <div class="muted small">${f ? 'Every quiz answer with explanations and task examples' : 'Unlocks after you finish the final exam'}</div></div>
-        <span class="pill ${f?'done':'locked'}">${f ? 'Open' : 'Locked'}</span></a>
+    </section>
+    <div class="home-lower">
+      <section class="home-panel"><div class="eyebrow">Make it stick</div><h3>Practice, experiment, improve.</h3>
+        <p class="muted">Try interactive design challenges, earn stars, and see exactly which skills to strengthen. Your best work and XP stay saved on this device.</p>
+        <a class="studio-banner" href="#/studio"><span><strong>Open the hands-on studio</strong><span class="muted small">${studio.done?studio.done+' of '+EX.length+' challenges complete · '+st.xp+' XP':EX.length+' interactive challenges · scores, stars & skill feedback'}</span></span><span class="pill">Explore →</span></a>
+      </section>
+      <section class="home-panel"><div class="eyebrow">Study smart</div><h3>Learn, try, check.</h3>
+        <p class="muted">Each week has bite-size lessons and examples. Practice quizzes explain every answer right away; save the final exam for when you feel ready.</p>
+        <p class="muted small" style="margin:14px 0 0">${f?'<a href="#/key">Review your answer key and task examples →</a>':'Answer key unlocks after the final exam.'}</p>
+      </section>
     </div>
   </div>`;
 }
 
 /* ---------- Module ---------- */
 function labHTML(kind){
+  if (kind === 'test_plan_lab') return `<section class="card lab" aria-labelledby="tp-title">
+    <h3 id="tp-title">Usability test-plan workbench</h3>
+    <p class="muted small">Build a fair, useful five-person test. Your draft saves on this device; improve it until it scores 80+.</p>
+    <div class="test-plan" id="test-plan" style="margin-top:16px">
+      <div class="test-field"><label for="tp-task">1. Write a task for the participant</label>
+        <select id="tp-task"><option value="leading">Tap the blue button to save this article.</option><option value="goal">Save this article so you can find it again.</option><option value="vague">Tell me what you think about this screen.</option></select></div>
+      <div class="test-field"><label for="tp-measure">2. Choose a success measure</label>
+        <select id="tp-measure"><option value="opinion">Ask whether the screen feels easy.</option><option value="completion">Participant finds and saves the article without help.</option><option value="clicks">Count every click, even if the task fails.</option></select></div>
+      <div class="test-field"><label for="tp-prompt">3. Choose a neutral moderator prompt</label>
+        <select id="tp-prompt"><option value="hint">The save button is in the top-right corner.</option><option value="neutral">What are you expecting to happen here?</option><option value="leading">You should tap the bookmark icon.</option></select></div>
+      <div class="test-field"><label for="tp-participants">4. Set the number of participants</label>
+        <input id="tp-participants" type="number" min="1" max="12" value="3" inputmode="numeric"></div>
+      <div class="test-field"><label for="tp-inclusive">5. Plan an inclusive setup</label>
+        <select id="tp-inclusive"><option value="narrow">Test with one friend on my laptop.</option><option value="inclusive">Include varied access needs and keyboard-only use.</option></select></div>
+      <div class="plan-score" aria-live="polite"><strong id="tp-score">0/100</strong><span id="tp-summary">Make a change to improve your test plan.</span></div>
+      <ul class="plan-feedback" id="tp-feedback" aria-live="polite"></ul>
+    </div></section>`;
   if (kind === 'card_lab') return `<section class="card lab" aria-labelledby="cl-h">
     <h3 id="cl-h">Card hierarchy lab</h3>
     <p class="muted small">Task T1. Adjust the numbers until the card passes every rule.</p>
@@ -318,19 +445,48 @@ function labHTML(kind){
   return '';
 }
 
+function initTestPlanLab(){
+  const root = document.getElementById('test-plan');
+  if (!root) return;
+  const ids = ['tp-task','tp-measure','tp-prompt','tp-participants','tp-inclusive'];
+  const draftKey = 'uiux-usability-plan-v1';
+  try {
+    const draft = JSON.parse(localStorage.getItem(draftKey) || '{}');
+    ids.forEach(id => { if (typeof draft[id] === 'string' && root.querySelector('#'+id)) root.querySelector('#'+id).value = draft[id]; });
+  } catch(e){ warnStorage(); }
+  function scorePlan(){
+    const values = Object.fromEntries(ids.map(id => [id,root.querySelector('#'+id).value]));
+    const n = Number(values['tp-participants']);
+    const checks = [
+      [values['tp-task']==='goal','The task describes a real user goal without giving away the interface.'],
+      [values['tp-measure']==='completion','Success is observable: the participant completes the task without help.'],
+      [values['tp-prompt']==='neutral','The moderator prompt is open-ended and does not point to the answer.'],
+      [Number.isInteger(n) && n>=5 && n<=8,'Plan a focused first round with 5–8 participants.'],
+      [values['tp-inclusive']==='inclusive','The setup considers varied access needs and keyboard use.']
+    ];
+    const points = checks.filter(([ok]) => ok).length*20;
+    root.querySelector('#tp-score').textContent = points+'/100';
+    root.querySelector('#tp-summary').textContent = points>=80 ? 'Strong plan. You are ready to run a useful first test.' : points>=60 ? 'Good start. Refine the flagged areas before testing.' : 'Keep improving: each criterion makes results more trustworthy.';
+    root.querySelector('#tp-feedback').innerHTML = checks.map(([ok,text]) => '<li class="'+(ok?'pass':'improve')+'">'+(ok?'✓ ':'○ ')+esc(text)+'</li>').join('');
+    try { localStorage.setItem(draftKey, JSON.stringify(values)); } catch(e){ warnStorage(); }
+  }
+  ids.forEach(id => root.querySelector('#'+id).addEventListener('input', scorePlan));
+  scorePlan();
+}
+
 function module(n){
   const m = modC(n); if (!m) return '<p>Module not found.</p>';
   const t = C.tasks.find(x => x.module_number === n);
   const r = store.quiz[n];
   const lessons = m.lessons.map(l => `<article class="card lesson">
-    <h3><span class="lesson-id">${esc(l.id)}</span>${esc(l.title)}</h3>
+    <h3><span class="lesson-id">${esc(l.id)}</span> ${esc(l.title)}</h3>
     <ul>${l.concepts.map(c => `<li>${esc(c)}</li>`).join('')}</ul>
     ${l.example ? `<p class="muted small" style="margin:12px 0 0"><strong>Try it.</strong> ${esc(l.example)}</p>` : ''}
     <div class="idea"><strong>Key idea.</strong> ${esc(l.takeaway)}</div></article>`).join('');
   const next = n < C.modules.length ? `<a class="btn ghost" href="#/m/${n+1}">Next module</a>` : `<a class="btn ghost" href="#/quiz/final">Final exam</a>`;
   return `<div class="stack">
     <div><a class="back" href="#/">Back to course</a>
-    <p class="muted small" style="margin-bottom:4px">Week ${m.week}</p>
+    <p class="muted small" style="margin-bottom:4px">Week ${m.week} of ${C.modules.length}</p>
     <h1 style="font-size:clamp(32px,9vw,46px)">${esc(m.title)}</h1>
     <p class="muted" style="margin-top:12px">${esc(m.summary)}</p></div>
     ${lessons}
@@ -416,24 +572,26 @@ function quiz(){
 function finishQuiz(){
   const score = qs.list.reduce((s, q, i) => s + (qs.ans[i] === q.answer ? 1 : 0), 0);
   qs.score = score; qs.done = true;
-  const rec = {score, total: qs.list.length};
+  const previous = qs.key === 'final' ? store.final : store.quiz[qs.key];
+  const rec = {score, bestScore:Math.max(score,previous?.bestScore ?? previous?.score ?? 0), total:qs.list.length, attempts:(previous?.attempts||0)+1};
   if (qs.key === 'final') store.final = Object.assign(rec, {answers: qs.ans.slice()});
   else store.quiz[qs.key] = rec;
   save(); updateProgress();
 }
 function results(){
   const pct = Math.round(qs.score/qs.list.length*100);
+  const best = qs.key==='final' ? store.final?.bestScore : store.quiz[qs.key]?.bestScore;
   const msg = pct >= 80 ? 'Strong work.' : pct >= 60 ? 'Good progress. Review the lessons you missed.' : 'Review the lessons and try again.';
   const isFinal = qs.key === 'final';
   const missed = qs.list.map((q,i) => ({q,i})).filter(x => qs.ans[x.i] !== x.q.answer);
   const review = (!isFinal && missed.length) ? `<div class="card"><h3>Review</h3>${missed.map(x => `<div class="k-q"><strong>${esc(x.q.q)}</strong><div class="k-a">Answer: ${L[x.q.answer]}. ${esc(x.q.options[x.q.answer])}</div><div class="muted small">${esc(x.q.explanation)}</div></div>`).join('')}</div>` : '';
   const nextN = !isFinal ? +qs.key : 0;
   const btns = isFinal
-    ? `<a class="btn" href="#/key">Open the answer key</a><a class="btn ghost" href="#/">Course home</a>`
+    ? `<a class="btn" href="#/key">Open the answer key</a><button class="btn ghost" data-retry>Retake final</button><a class="btn ghost" href="#/">Course home</a>`
     : `<a class="btn" href="${nextN < C.modules.length ? '#/m/'+(nextN+1) : '#/quiz/final'}">${nextN < C.modules.length ? 'Next module' : 'Start final exam'}</a><button class="btn ghost" data-retry>Retake quiz</button>`;
   return `<div class="stack"><div><p class="muted small">${esc(qs.title)}</p>
     <div class="big-score">${qs.score}/${qs.list.length}</div>
-    <p style="margin-top:8px">${pct}%. ${msg}</p></div>${review}<div class="btns">${btns}</div></div>`;
+    <p style="margin-top:8px">${pct}%. ${msg}</p>${best>qs.score?'<p class="muted small">Your personal best is '+best+'/'+qs.list.length+'.</p>':''}</div>${review}<div class="btns">${btns}</div></div>`;
 }
 
 /* ---------- Answer key ---------- */
@@ -454,7 +612,7 @@ function key(){
     <div class="k-a" style="font-weight:500">Example answer: ${esc(t.exemplar)}</div></div>`).join('');
   return `<div class="stack"><a class="back" href="#/">Back to course</a>
     <div><h1 style="font-size:clamp(32px,9vw,46px)">Answer key</h1>
-    <p class="muted" style="margin-top:12px">Your final exam score: ${f.score}/${f.total}.</p></div>
+    <p class="muted" style="margin-top:12px">Your best final exam score: ${f.bestScore??f.score}/${f.total}.</p></div>
     ${Q.modules.map(m => keyBlock('Module '+m.module_number+': '+m.title, m.questions)).join('')}
     ${keyBlock(Q.final.title, Q.final.questions)}
     <section class="card"><h3>Task examples</h3>${tasks}</section></div>`;
@@ -463,8 +621,8 @@ function key(){
 /* ---------- Studio (Part 2) ---------- */
 const SKEY = 'uiux-studio-v1';
 let st = {ex:{}, xp:0, days:[], badges:{}};
-try { const s0 = localStorage.getItem(SKEY); if (s0) st = Object.assign(st, JSON.parse(s0)); } catch(e){}
-function saveSt(){ try { localStorage.setItem(SKEY, JSON.stringify(st)); } catch(e){} }
+try { const s0 = localStorage.getItem(SKEY); if (s0) st = Object.assign(st, JSON.parse(s0)); } catch(e){ warnStorage(); }
+function saveSt(){ try { localStorage.setItem(SKEY, JSON.stringify(st)); } catch(e){ warnStorage(); } }
 const fmtD = d => d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
 function streak(){
   const set = new Set(st.days); const d = new Date();
@@ -857,8 +1015,8 @@ function isUnlocked(id){ const i = EX.findIndex(e => e.id===id); return i<=0 || 
 function studioStats(){
   const done = EX.filter(e => st.ex[e.id]);
   const avg = done.length ? done.reduce((s,e) => s+st.ex[e.id].best,0)/done.length*100 : null;
-  const p1 = Object.values(store.quiz).map(r => r.score/r.total*100);
-  if (store.final) p1.push(store.final.score/store.final.total*100);
+  const p1 = Object.values(store.quiz).map(r => (r.bestScore??r.score)/r.total*100);
+  if (store.final) p1.push((store.final.bestScore??store.final.score)/store.final.total*100);
   const p1avg = p1.length ? p1.reduce((a,b) => a+b,0)/p1.length : null;
   const parts = [avg,p1avg].filter(x => x!==null);
   const overall = parts.length ? parts.reduce((a,b) => a+b,0)/parts.length : null;
@@ -866,7 +1024,7 @@ function studioStats(){
 }
 function studioTeaser(){
   const s = studioStats(), lv = lvlOf(st.xp);
-  return '<a class="row" href="#/studio" style="border-color:var(--accent)"><div><div class="row-title">Part 2: Hands-on Studio</div>'+
+  return '<a class="row" href="#/studio" style="border-color:var(--accent)"><div><div class="row-title">Hands-on Studio</div>'+
     '<div class="muted small">'+(s.done ? 'Level '+lv+', '+LEVELS[lv-1]+'. '+s.done+' of '+EX.length+' challenges done.' : EX.length+' interactive challenges with stars, XP and badges.')+'</div></div>'+
     '<span class="pill">'+(s.done ? st.xp+' XP' : 'New')+'</span></a>';
 }
@@ -886,7 +1044,7 @@ function studioHome(){
     path += '<a class="node" href="#/studio/ex/'+e.id+'" style="transform:translateX('+off+'px)" '+(open?'':'aria-disabled="true"')+'><span class="nd'+(r?' done':(open?(cur?' cur':''):' lock'))+'">'+(r?'✓':(open?(i+1):'🔒'))+'</span><span class="nt">'+esc(e.title)+'</span><span class="ns">'+stars+'</span></a>';
   });
   const stk = streak();
-  return '<div class="stack"><div><a class="back" href="#/">Back to Part 1</a><h1 style="font-size:clamp(34px,10vw,50px)">Hands-on Studio</h1>'+
+  return '<div class="stack"><div><a class="back" href="#/">Back to course</a><h1 style="font-size:clamp(34px,10vw,50px)">Hands-on Studio</h1>'+
     '<p class="muted" style="margin-top:12px;max-width:46ch">Learn by doing. Every challenge gives you stars, XP and instant feedback. You can retry any of them as many times as you like.</p></div>'+
     '<section class="card"><div class="lvl-top"><div><div class="muted small">Level '+lv+'</div><h2 style="font-size:26px">'+LEVELS[lv-1]+'</h2></div><div class="grade"><span class="muted small">Grade</span><b>'+(s.overall===null?'—':letter(s.overall))+'</b></div></div>'+
     '<div class="xpbar" style="margin:14px 0 6px" role="progressbar" aria-valuenow="'+Math.round(pct)+'" aria-valuemin="0" aria-valuemax="100"><span style="width:'+pct+'%"></span></div>'+
@@ -989,7 +1147,7 @@ function render(scroll){
   else if (parts[0] === 'key') html = key();
   else html = home();
   app.innerHTML = html;
-  initCardLab(); initContrastLab();
+  initCardLab(); initContrastLab(); initTestPlanLab();
   if (parts[0] === 'studio' && parts[1] === 'ex') initEx(parts[2]);
   const dt = document.getElementById('demo-toggle');
   if (dt) dt.addEventListener('click', () => {
@@ -1007,15 +1165,19 @@ app.addEventListener('click', e => {
     if (qs.mode === 'practice' && qs.ans[qs.i] !== null) return;
     qs.ans[qs.i] = +t.dataset.opt; render(false);
   } else if (t.hasAttribute('data-next')){
-    if (qs.i < qs.list.length-1) qs.i++; else finishQuiz();
-    render(true);
+    const submitted = qs.i === qs.list.length-1;
+    if (submitted) finishQuiz(); else qs.i++;
+    render(!submitted);
   } else if (t.hasAttribute('data-prev')){ qs.i--; render(true); }
   else if (t.hasAttribute('data-retry')){ startQuiz(qs.key); render(true); }
 });
-app.innerHTML = '<p class="muted">Loading course...</p>';
-Promise.all([fetch('data/curriculum.json').then(r => r.json()), fetch('data/quiz.json').then(r => r.json())])
+app.innerHTML = '<p class="muted">Loading your learning studio...</p>';
+Promise.all([
+  fetch('data/curriculum.json').then(r => { if (!r.ok) throw new Error('Curriculum request failed: '+r.status); return r.json(); }),
+  fetch('data/quiz.json').then(r => { if (!r.ok) throw new Error('Quiz request failed: '+r.status); return r.json(); })
+])
   .then(([c, q]) => { C = c; Q = q; render(true); })
-  .catch(() => { app.innerHTML = '<div class="card"><h3>Could not load the course</h3><p>The data files did not load. Open the site from its web address (not from a saved file) and check that the data folder is uploaded.</p></div>'; });
+  .catch(error => { console.error('Learnme could not load course data.',error); app.innerHTML = '<div class="card"><h3>Could not load the course</h3><p>The course data could not be loaded. Check your connection and confirm the <code>data</code> folder is deployed next to this page.</p><button class="btn" type="button" onclick="location.reload()">Try again</button></div>'; });
 })();
 </script>
 </body>
