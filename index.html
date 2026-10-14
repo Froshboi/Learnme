@@ -124,11 +124,104 @@ button,input,select{font:inherit;color:inherit}
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media (min-width:560px){.lab-out{grid-template-columns:1fr 1fr}}
+
+/* ---------- Studio (Part 2) ---------- */
+.navlink{font-weight:600;text-decoration:none;color:var(--accent);min-height:44px;display:inline-flex;align-items:center;padding:0 4px}
+.btn.sm{min-height:44px;padding:0 14px;font-size:15px}
+.tipbox{border-left:4px solid #F5B301}
+.mk-card{background:var(--bg);border:1px dashed var(--line);border-radius:12px;padding:20px}
+.mk-btn{display:inline-flex;align-items:center;padding:0 20px;min-height:44px;border-radius:10px}
+.mui{background:#fff;color:#1a1a1a;border-radius:12px;padding:16px;border:1px solid #ccd2de}
+.ctl-grp{margin-top:16px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:6px 8px 0 0;background:var(--bg)}
+.seg button{min-height:44px;padding:0 14px;border:0;background:transparent;cursor:pointer;font-size:15px}
+.seg button.on{background:var(--accent);color:var(--accent-ink);font-weight:600}
+.sl{margin-top:16px}
+.sl-top{display:flex;justify-content:space-between;gap:12px;font-size:15px}
+.sl-row{display:flex;gap:8px;align-items:center}
+.sl-row input{flex:1;min-height:44px;accent-color:var(--accent);min-width:0}
+.stp{width:44px;height:44px;flex:none;border-radius:10px;border:1px solid var(--line);background:var(--bg);font-size:22px;cursor:pointer}
+.padbox{background:var(--accent-soft);border-radius:12px}
+.padin{background:var(--surface);border-radius:6px;padding:0}
+.gb{background:var(--accent-soft);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--accent);overflow:hidden}
+.padin .lab{font-weight:600;font-size:15px}
+.padin .fld{height:40px;border:1px solid var(--line);border-radius:8px;background:var(--bg)}
+.tsr{display:flex;gap:12px;align-items:baseline;margin-bottom:6px}
+.tsr>span{width:44px;flex:none}
+.fit{overflow:hidden;background:var(--bg);border:1px dashed var(--line);border-radius:10px;padding:0}
+.ct-item{padding:16px 0;border-top:1px solid var(--line)}
+.ct-item:first-child{border-top:0;padding-top:0}
+.ratio-line{margin-top:8px;font-weight:600;color:var(--bad)}
+.ratio-line.okr{color:var(--ok)}
+.hot{display:block;width:100%;text-align:left;background:none;border:2px solid transparent;border-radius:8px;padding:2px;margin:0;font:inherit;color:inherit;cursor:pointer}
+.hot.flag{border-color:#2B50E6;background:rgba(43,80,230,.1)}
+.hot.bad{border-color:#D92D20;background:rgba(217,45,32,.12)}
+.swr{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.swt{min-height:56px;border-radius:10px;border:3px solid transparent;font-weight:600;cursor:pointer;outline:1px solid var(--line)}
+.swt.on{border-color:var(--ink)}
+.reg{cursor:pointer}
+.phone{width:100%;max-width:300px;margin:0 auto;background:#fff;border:3px solid #333;border-radius:26px;padding:12px;min-height:220px;display:flex;flex-direction:column;gap:8px}
+.wf{background:#E4E6EA;border:2px solid transparent;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#444;font-size:13px;cursor:pointer;padding:6px}
+.wf.sel{border-color:#2B50E6;background:#D5DEFF}
+.wf-img{background:linear-gradient(to top right,transparent calc(50% - 1px),#999,transparent calc(50% + 1px)),linear-gradient(to bottom right,transparent calc(50% - 1px),#999,transparent calc(50% + 1px)),#E4E6EA}
+.wf-ad{background:repeating-linear-gradient(45deg,#E4E6EA,#E4E6EA 8px,#D4D7DD 8px,#D4D7DD 16px)}
+.wf-btn{background:#9AA3B5;color:#fff;border-radius:10px;font-weight:600}
+.wf .bars{width:100%;display:grid;gap:8px}
+.wf .bars i{display:block;height:8px;border-radius:4px;background:#B9BECA}
+.wf .dots{display:flex;gap:22px}
+.wf .dots i{display:block;width:16px;height:16px;border-radius:50%;background:#B9BECA}
+.fnode{margin:0 auto;text-align:center;padding:12px 16px;max-width:260px;background:var(--surface);border:2px dashed var(--line);border-radius:6px}
+.fnode.fn-term{border:2px solid var(--accent);border-radius:999px}
+.fnode.fn-step{border:2px solid var(--accent);border-radius:6px}
+.fnode.fn-dec{border:0;background:var(--accent-soft);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);padding:34px 40px}
+.arrow{text-align:center;color:var(--muted);font-size:20px;line-height:1.2}
+.rl{list-style:none;padding:0;margin:12px 0}
+.rl li{display:flex;gap:10px;padding:6px 0;align-items:flex-start}
+.rl .mark{width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex:none;margin-top:1px}
+.rl li.ok .mark{background:var(--ok);color:var(--bg)}
+.rl li.no .mark{background:var(--line);color:var(--muted)}
+.fb-card.win{border-color:var(--ok);background:var(--ok-soft)}
+.center{text-align:center}
+.stars{display:flex;gap:8px;justify-content:center;font-size:64px;line-height:1}
+.stars span{color:var(--line)}
+.stars span.on{color:#F5B301;animation:pop .55s cubic-bezier(.2,1.6,.4,1) backwards}
+@keyframes pop{0%{transform:scale(.2);opacity:0}100%{transform:scale(1);opacity:1}}
+.xp-row{display:flex;justify-content:space-between;align-items:baseline}
+.xp-gain{font-family:var(--display);font-size:32px;color:var(--ok)}
+.xpbar{height:12px;background:var(--line);border-radius:12px;overflow:hidden}
+.xpbar span{display:block;height:100%;background:var(--accent);border-radius:12px;transition:width .6s}
+.lvl-top{display:flex;justify-content:space-between;align-items:flex-start}
+.grade{text-align:center}
+.grade b{display:block;font-family:var(--display);font-size:40px;line-height:1;color:var(--ok)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.stat{background:var(--bg);border-radius:12px;padding:12px;text-align:center}
+.stat b{display:block;font-family:var(--display);font-size:26px;line-height:1.1}
+.skill{display:grid;grid-template-columns:96px 1fr 44px;gap:10px;align-items:center;margin:10px 0;font-size:15px}
+.skill b{text-align:right}
+.badges{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
+.badge{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center;font-size:14px}
+.badge .muted{font-size:13px}
+.badge.off{opacity:.45}
+.badge .bi{display:flex;width:44px;height:44px;margin:0 auto 6px;border-radius:50%;background:var(--accent-soft);color:var(--accent);align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:18px}
+.path{display:flex;flex-direction:column;align-items:center;gap:20px;padding:4px 0 12px}
+.unit-h{align-self:stretch;background:var(--accent);color:var(--accent-ink);border-radius:14px;padding:14px 18px;margin-top:8px}
+.node{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:var(--ink);width:170px;text-align:center}
+.nd{width:76px;height:76px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:28px;background:var(--accent);color:var(--accent-ink);border-bottom:6px solid rgba(0,0,0,.25)}
+.nd.done{background:var(--ok);color:var(--bg)}
+.nd.lock{background:var(--line);color:var(--muted);border-bottom-color:transparent;font-size:24px}
+.nd.cur{animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(43,80,230,.45)}50%{box-shadow:0 0 0 14px rgba(43,80,230,0)}}
+.nt{font-weight:600;margin-top:8px;line-height:1.2}
+.ns{color:#F5B301;font-size:20px;letter-spacing:2px}
+.ns .dim{color:var(--line)}
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:50}
+@media (prefers-reduced-motion:reduce){.nd.cur,.stars span.on{animation:none}}
 </style>
 </head>
 <body>
 <header class="top"><div class="top-in">
   <a class="brand" href="#/">UI/UX Foundations</a>
+  <a class="navlink" href="#/studio">Studio</a>
   <div class="prog" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progbar"><span id="progfill"></span></div>
   <span class="prog-label" id="proglabel">0%</span>
 </div></header>
@@ -180,7 +273,9 @@ function home(){
       <div><button class="btn ghost" id="demo-toggle" aria-pressed="false">Add hierarchy</button></div>
       <p class="muted small">Same words, same card. Only size, weight, color and space changed. That is the whole first week.</p>
     </div>
-    <h2>Your four weeks</h2>
+    <h2>Part 2: Hands-on Studio</h2>
+    <div>${studioTeaser()}</div>
+    <h2>Part 1: Your four weeks</h2>
     <div class="stack" style="--g:12px">${rows}
       <a class="row" href="#/quiz/final"><div><div class="row-title">${esc(Q.final.title)}</div>
         <div class="muted small">${Q.final.questions.length} questions across all four modules</div></div>
@@ -365,6 +460,521 @@ function key(){
     <section class="card"><h3>Task examples</h3>${tasks}</section></div>`;
 }
 
+/* ---------- Studio (Part 2) ---------- */
+const SKEY = 'uiux-studio-v1';
+let st = {ex:{}, xp:0, days:[], badges:{}};
+try { const s0 = localStorage.getItem(SKEY); if (s0) st = Object.assign(st, JSON.parse(s0)); } catch(e){}
+function saveSt(){ try { localStorage.setItem(SKEY, JSON.stringify(st)); } catch(e){} }
+const fmtD = d => d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+function streak(){
+  const set = new Set(st.days); const d = new Date();
+  if (!set.has(fmtD(d))) d.setDate(d.getDate()-1);
+  let n = 0; while (set.has(fmtD(d))){ n++; d.setDate(d.getDate()-1); }
+  return n;
+}
+const LEVELS = ['Beginner','Sketcher','Observer','Layout Learner','Type Tinkerer','Color Crafter','Flow Finder','Design Pro'];
+const XPL = 50;
+const lvlOf = xp => Math.min(LEVELS.length, Math.floor(xp/XPL)+1);
+function hsl2hex(h,s,l){
+  s/=100; l/=100;
+  const k = n => (n + h/30) % 12, a = s*Math.min(l,1-l);
+  const f = n => l - a*Math.max(-1, Math.min(k(n)-3, Math.min(9-k(n), 1)));
+  const x = v => Math.round(v*255).toString(16).padStart(2,'0');
+  return '#'+x(f(0))+x(f(8))+x(f(4));
+}
+function ratioOf(a,b){ const x = lum(a), y = lum(b); return (Math.max(x,y)+0.05)/(Math.min(x,y)+0.05); }
+function letter(p){
+  const t = [[97,'A+'],[93,'A'],[90,'A-'],[87,'B+'],[83,'B'],[80,'B-'],[77,'C+'],[73,'C'],[70,'C-']];
+  for (const r of t) if (p >= r[0]) return r[1];
+  return 'D';
+}
+
+/* ----- small UI helpers ----- */
+function stepper(key,label,min,max,val,disp){
+  return '<div class="sl"><div class="sl-top"><label for="sl-'+key+'">'+label+'</label><strong id="slv-'+key+'">'+disp+'</strong></div>'+
+    '<div class="sl-row"><button type="button" class="stp" data-k="'+key+'" data-d="-1" aria-label="Decrease">&minus;</button>'+
+    '<input id="sl-'+key+'" type="range" min="'+min+'" max="'+max+'" step="1" value="'+val+'" data-k="'+key+'">'+
+    '<button type="button" class="stp" data-k="'+key+'" data-d="1" aria-label="Increase">+</button></div></div>';
+}
+function bindSteppers(root,S,fmt,onchange){
+  const apply = (k,v) => { S[k] = v; const o = root.querySelector('#slv-'+k); if (o) o.textContent = fmt(k,v); onchange(k); };
+  root.querySelectorAll('input[type=range]').forEach(i => i.addEventListener('input', () => apply(i.dataset.k, +i.value)));
+  root.querySelectorAll('.stp').forEach(b => b.addEventListener('click', () => {
+    const k = b.dataset.k, i = root.querySelector('#sl-'+k);
+    const v = Math.max(+i.min, Math.min(+i.max, +i.value + (+b.dataset.d)));
+    i.value = v; apply(k, v);
+  }));
+}
+function seg(group,opts,sel){
+  return '<div class="seg" role="group" aria-label="'+group+'">'+opts.map(o =>
+    '<button type="button" class="'+(String(o.v)===String(sel)?'on':'')+'" data-g="'+group+'" data-v="'+o.v+'">'+o.t+'</button>').join('')+'</div>';
+}
+function bindSeg(root,fn){
+  root.querySelectorAll('.seg button').forEach(b => b.addEventListener('click', () => {
+    const g = b.dataset.g;
+    root.querySelectorAll('.seg button[data-g="'+g+'"]').forEach(x => x.classList.toggle('on', x === b));
+    fn(g, b.dataset.v);
+  }));
+}
+function onActivate(el,fn){
+  el.addEventListener('click', fn);
+  el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); fn(e); } });
+}
+
+/* ----- the challenges ----- */
+const EX = [
+{ id:'e1', unit:'Unit 1: Hierarchy and spacing', skill:'Hierarchy', title:'Hierarchy mixer',
+  blurb:'Make this card guide the eye using size, weight and color.',
+  tip:'The most important thing should be the biggest. Quiet details stay small and light. Save the accent color for the button.',
+  mount(root){
+    const S = {head:{size:1,weight:0,color:0}, det:{size:1,weight:0,color:0}, btn:{size:1,weight:0,color:0}};
+    const nm = {head:'Headline', det:'Details', btn:'Button'};
+    root.innerHTML = '<div class="mk-card" id="pv"></div><div id="ct"></div>';
+    const pv = root.querySelector('#pv'), ct = root.querySelector('#ct');
+    ct.innerHTML = ['head','det','btn'].map(k => '<div class="ctl-grp"><strong>'+nm[k]+'</strong><br>'+
+      seg(k+'-size',[{v:0,t:'Small'},{v:1,t:'Medium'},{v:2,t:'Large'}],S[k].size)+
+      seg(k+'-weight',[{v:0,t:'Regular'},{v:1,t:'Bold'}],S[k].weight)+
+      seg(k+'-color',[{v:0,t:'Muted'},{v:1,t:'Strong'},{v:2,t:'Accent'}],S[k].color)+'</div>').join('');
+    const hs = [18,22,32], ds = [13,15,18], bs = [13,15,18];
+    const tc = ['var(--muted)','var(--ink)','var(--accent)'];
+    const bg = ['var(--line)','var(--ink)','var(--accent)'], fg = ['var(--ink)','var(--surface)','var(--accent-ink)'];
+    function draw(){
+      pv.innerHTML =
+        '<div style="font-family:var(--display);line-height:1.15;margin-bottom:8px;font-size:'+hs[S.head.size]+'px;font-weight:'+(S.head.weight?800:400)+';color:'+tc[S.head.color]+'">Weekend market</div>'+
+        '<div style="margin-bottom:16px;font-size:'+ds[S.det.size]+'px;font-weight:'+(S.det.weight?700:400)+';color:'+tc[S.det.color]+'">Fresh produce, live music and street food every Saturday morning.</div>'+
+        '<span class="mk-btn" style="font-size:'+bs[S.btn.size]+'px;font-weight:'+(S.btn.weight?700:400)+';background:'+bg[S.btn.color]+';color:'+fg[S.btn.color]+'">Get tickets</span>';
+    }
+    bindSeg(ct,(g,v) => { const p = g.split('-'); S[p[0]][p[1]] = +v; draw(); });
+    draw();
+    const em = k => S[k].size + S[k].weight + (S[k].color ? 1 : 0);
+    return () => [
+      {ok:S.head.size>S.det.size && S.head.size>=S.btn.size, pass:'The headline is the biggest text.', fail:'Make the headline larger than the details.'},
+      {ok:S.head.weight===1, pass:'The headline is bold, so it grabs attention first.', fail:'Try making the headline bold.'},
+      {ok:em('det')<em('btn') && em('det')<em('head'), pass:'The details are the quietest part, as they should be.', fail:'The details should have less emphasis than the headline and the button. Try smaller, regular and muted.'},
+      {ok:S.btn.color===2 && S.head.color!==2 && S.det.color!==2, pass:'Only the button uses the accent color, so it is easy to spot.', fail:'Give the button the accent color and keep accent off the other two.'},
+      {ok:S.head.size===2 && S.det.size<2 && S.btn.size<2, pass:'Only one thing is large: a single clear focal point.', fail:'Only the headline should be Large. Two big things compete.'}
+    ];
+  }},
+{ id:'e2', unit:'Unit 1: Hierarchy and spacing', skill:'Spacing', title:'Snap to 8',
+  blurb:'Fix the spacing in this form using the 8pt system.',
+  tip:'Use only multiples of 8: 8, 16, 24, 32, 40, 48. Space inside a group should be smaller than space between groups.',
+  mount(root){
+    const S = {pad:10, inner:5, gap:13};
+    root.innerHTML = '<div id="pv"></div><div id="ct"></div>';
+    const pv = root.querySelector('#pv'), ct = root.querySelector('#ct');
+    ct.innerHTML = stepper('pad','Padding (space inside the card)',0,48,S.pad,S.pad+'px')+
+      stepper('inner','Gap between a label and its field',0,32,S.inner,S.inner+'px')+
+      stepper('gap','Gap between the two groups',0,64,S.gap,S.gap+'px');
+    const gb = n => '<div class="gb" style="height:'+n+'px">'+(n>=14?'<span>'+n+'px</span>':'')+'</div>';
+    function draw(){
+      pv.innerHTML = '<div class="padbox" style="padding:'+S.pad+'px"><div class="padin">'+
+        '<div class="lab">Email</div>'+gb(S.inner)+'<div class="fld"></div>'+gb(S.gap)+
+        '<div class="lab">Password</div>'+gb(S.inner)+'<div class="fld"></div></div></div>'+
+        '<p class="muted small" style="margin:8px 0 0">The blue bands show your padding and gaps in pixels.</p>';
+    }
+    bindSteppers(ct,S,(k,v) => v+'px',draw);
+    draw();
+    return () => [
+      {ok:S.pad%8===0 && S.pad>=16, pass:'Padding is a multiple of 8 and at least 16px.', fail:'Padding should be a multiple of 8 and at least 16px.'},
+      {ok:S.inner%8===0 && S.inner>0, pass:'The label-to-field gap sits on the 8pt grid.', fail:'The label-to-field gap needs to be a multiple of 8 (not zero).'},
+      {ok:S.gap%8===0 && S.gap>0, pass:'The gap between groups sits on the 8pt grid.', fail:'The gap between groups needs to be a multiple of 8.'},
+      {ok:S.inner<S.gap, pass:'Space inside a group is smaller than space between groups. Nice use of proximity.', fail:'Related things should be closer than unrelated things. Make the gap between groups bigger than the label gap.'}
+    ];
+  }},
+{ id:'e3', unit:'Unit 1: Hierarchy and spacing', skill:'Hierarchy', title:'Spot the flaws',
+  blurb:'Find every design problem in this cafe screen. Some parts are fine, so tap carefully.',
+  tip:'Look for text that is hard to read, tiny text, things squeezed together, small buttons, and anything that does not line up.',
+  mount(root){
+    const flaws = {
+      sub:{pass:'Low contrast: the pale grey subtitle is hard to read.', fail:'Something is hard to read because the text is too pale.'},
+      body:{pass:'Tiny text: 10px is too small to read comfortably.', fail:'Some text is too small to read comfortably.'},
+      cramped:{pass:'Cramped spacing: the title and text touch each other.', fail:'Two things that belong together are squeezed with no breathing room.'},
+      btn1:{pass:'Small touch target: 28px tall is under the 44px minimum.', fail:'One button is too small to tap easily.'},
+      tag:{pass:'Misaligned: the tag sticks out from the left edge everything else shares.', fail:'One item does not line up with the left edge of the others.'}
+    };
+    const flagged = new Set();
+    const sp = '<div style="height:16px"></div>';
+    root.innerHTML = '<p class="muted small" style="margin-top:0">Tap every part that breaks a rule. Tap again to un-mark.</p><div class="mui">'+
+      '<button type="button" class="hot" data-id="title" aria-pressed="false"><div style="font:700 22px/1.2 var(--display);color:#14213D">Cafe Luna</div></button>'+
+      '<button type="button" class="hot" data-id="sub" aria-pressed="false"><div style="font-size:15px;color:#BDBDBD">Open daily from 8am to 6pm</div></button>'+sp+
+      '<button type="button" class="hot" data-id="img" aria-pressed="false"><div style="height:72px;background:#E3E7EE;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#55607A;font-size:13px">Photo of pastries</div></button>'+sp+
+      '<button type="button" class="hot" data-id="tag" aria-pressed="false"><div style="margin-left:14px;display:inline-block;background:#FFE7BA;color:#7A4B00;font-size:13px;padding:2px 10px;border-radius:999px">New menu</div></button>'+sp+
+      '<button type="button" class="hot" data-id="cramped" aria-pressed="false"><div style="font:700 17px/1.2 var(--display);color:#14213D">Today\'s special</div><div style="font-size:15px;color:#333;line-height:1.2">Almond croissant with warm honey butter.</div></button>'+sp+
+      '<button type="button" class="hot" data-id="body" aria-pressed="false"><div style="font-size:10px;color:#333">Allergy note: our pastries are made in a kitchen that also handles nuts, dairy and gluten.</div></button>'+sp+
+      '<div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">'+
+      '<button type="button" class="hot" data-id="btn1" style="width:auto" aria-pressed="false"><span style="display:inline-flex;align-items:center;height:28px;padding:0 14px;border-radius:6px;background:#2B50E6;color:#fff;font-size:14px">Reserve</span></button>'+
+      '<button type="button" class="hot" data-id="btn2" style="width:auto" aria-pressed="false"><span style="display:inline-flex;align-items:center;height:48px;padding:0 20px;border-radius:10px;background:#2B50E6;color:#fff;font-size:16px;font-weight:600">Order now</span></button></div></div>';
+    root.querySelectorAll('.hot').forEach(b => b.addEventListener('click', () => {
+      const id = b.dataset.id;
+      if (flagged.has(id)) flagged.delete(id); else flagged.add(id);
+      b.classList.toggle('flag', flagged.has(id)); b.classList.remove('bad');
+      b.setAttribute('aria-pressed', flagged.has(id));
+    }));
+    return () => {
+      root.querySelectorAll('.hot').forEach(b => b.classList.toggle('bad', flagged.has(b.dataset.id) && !(b.dataset.id in flaws)));
+      const r = Object.keys(flaws).map(k => ({ok:flagged.has(k), pass:'Found it. '+flaws[k].pass, fail:'One more is hiding. '+flaws[k].fail}));
+      const wrong = [...flagged].filter(k => !(k in flaws));
+      r.push({ok:wrong.length===0, pass:'No false alarms. Everything else on the screen is fine.', fail:'Some parts you marked are actually fine (shown in red). Un-mark them.'});
+      return r;
+    };
+  }},
+{ id:'e4', unit:'Unit 2: Typography', skill:'Typography', title:'Type scale builder',
+  blurb:'Build a type scale where every step is clearly different from the last.',
+  tip:'Body text should be at least 16px. A ratio around 1.2 to 1.25 gives steps that are clearly different without getting huge. Each step is the one before multiplied by the ratio.',
+  mount(root){
+    const RS = [1.125,1.2,1.25,1.333,1.5];
+    const S = {base:14, ri:0};
+    root.innerHTML = '<div class="mk-card" id="pv" style="overflow:hidden"></div><div id="ct"></div>';
+    const pv = root.querySelector('#pv'), ct = root.querySelector('#ct');
+    ct.innerHTML = stepper('base','Body text size',10,24,S.base,S.base+'px')+
+      '<div class="ctl-grp"><strong>Scale ratio</strong><br>'+seg('ratio',RS.map((r,i) => ({v:i,t:String(r)})),S.ri)+'</div>';
+    const names = ['Body copy','Label','Section','Title','Headline'];
+    const sizes = () => [0,1,2,3,4].map(i => Math.round(S.base*Math.pow(RS[S.ri],i)));
+    function draw(){
+      const z = sizes();
+      pv.innerHTML = [4,3,2,1,0].map(i => '<div class="tsr"><span class="muted small">'+z[i]+'px</span><div style="overflow-wrap:anywhere;font-size:'+z[i]+'px;font-family:var(--display);font-weight:'+(i>0?700:400)+';line-height:1.15">'+names[i]+'</div></div>').join('');
+    }
+    bindSteppers(ct,S,(k,v) => v+'px',draw);
+    bindSeg(ct,(g,v) => { S.ri = +v; draw(); });
+    draw();
+    return () => { const z = sizes(); return [
+      {ok:S.base>=16, pass:'Body text is 16px or larger.', fail:'Make body text at least 16px so it reads well on a phone.'},
+      {ok:RS[S.ri]>=1.2, pass:'The ratio is big enough that each step looks different.', fail:'Steps look almost the same. Pick a bigger ratio.'},
+      {ok:z[4]>=32, pass:'The headline is big enough to lead the page.', fail:'The headline is still small. Raise the base size or the ratio.'},
+      {ok:z[4]<=48, pass:'The headline is not oversized.', fail:'The headline is getting too huge. Lower the ratio or the base size.'}
+    ]; };
+  }},
+{ id:'e5', unit:'Unit 2: Typography', skill:'Typography', title:'Readability tuner',
+  blurb:'Tune this paragraph until it is comfortable to read.',
+  tip:'Aim for 45 to 75 characters per line, a line height of 1.4 to 1.6, text of at least 16px, and left alignment.',
+  mount(root){
+    const S = {size:12, chars:110, lh:10, align:'justify'};
+    const text = 'Good typography disappears. Readers should never notice the letters, only the ideas. When lines run too long, the eye gets lost finding the start of the next line. When lines are too short, reading feels choppy. Comfortable spacing and size keep text calm and easy to follow.';
+    root.innerHTML = '<div id="pv"></div><div id="ct"></div>';
+    const pv = root.querySelector('#pv'), ct = root.querySelector('#ct');
+    ct.innerHTML = stepper('size','Text size',10,24,S.size,S.size+'px')+
+      stepper('chars','Line length (characters)',20,120,S.chars,String(S.chars))+
+      stepper('lh','Line height',10,22,S.lh,(S.lh/10).toFixed(1))+
+      '<div class="ctl-grp"><strong>Alignment</strong><br>'+seg('align',[{v:'left',t:'Left'},{v:'center',t:'Center'},{v:'justify',t:'Justified'}],S.align)+'</div>';
+    function draw(){
+      pv.innerHTML = '<div class="fit" id="fit"><div id="txt" style="width:'+S.chars+'ch;font-size:'+S.size+'px;line-height:'+(S.lh/10)+';text-align:'+S.align+'">'+text+'</div></div><p class="muted small" id="note" style="margin:8px 0 0"></p>';
+      const fit = pv.querySelector('#fit'), txt = pv.querySelector('#txt');
+      const s = Math.min(1, fit.clientWidth / txt.offsetWidth);
+      txt.style.transformOrigin = 'top left'; txt.style.transform = 'scale('+s+')';
+      fit.style.height = Math.ceil(txt.offsetHeight*s)+'px';
+      pv.querySelector('#note').textContent = s < 0.98 ? 'Shown smaller so it fits your screen. The proportions are the same.' : '';
+    }
+    bindSteppers(ct,S,(k,v) => k==='lh' ? (v/10).toFixed(1) : (k==='size' ? v+'px' : String(v)),draw);
+    bindSeg(ct,(g,v) => { S.align = v; draw(); });
+    draw();
+    return () => [
+      {ok:S.size>=16, pass:'Text is 16px or larger.', fail:'Raise the text size to at least 16px.'},
+      {ok:S.chars>=45 && S.chars<=75, pass:'Line length is in the comfy 45 to 75 character range.', fail:'Aim for 45 to 75 characters per line.'},
+      {ok:S.lh>=14 && S.lh<=16, pass:'Line height is between 1.4 and 1.6.', fail:'Set the line height between 1.4 and 1.6.'},
+      {ok:S.align==='left', pass:'Left-aligned text gives the eye a clean edge to return to.', fail:'Try left alignment. Justified text creates uneven gaps.'}
+    ];
+  }},
+{ id:'e6', unit:'Unit 3: Color', skill:'Color', title:'Contrast fixer',
+  blurb:'Slide each text color until it is easy to read on its background.',
+  tip:'Normal text needs a contrast ratio of at least 4.5:1. On light backgrounds go darker. On dark backgrounds go lighter.',
+  mount(root){
+    const cards = [{bg:'#FFFFFF',h:220,s:12,name:'Light card'},{bg:'#111827',h:210,s:15,name:'Dark mode card'},{bg:'#2B50E6',h:0,s:0,name:'Brand blue banner'}];
+    const S = {L0:72, L1:28, L2:60};
+    root.innerHTML = cards.map((c,i) => '<div class="ct-item"><strong>'+c.name+'</strong><div id="cp'+i+'" style="margin-top:8px"></div>'+stepper('L'+i,'Text lightness',0,100,S['L'+i],S['L'+i]+'%')+'</div>').join('');
+    const hex = i => hsl2hex(cards[i].h, cards[i].s, S['L'+i]);
+    function draw(i){
+      const c = cards[i], x = hex(i), r = ratioOf(x,c.bg);
+      root.querySelector('#cp'+i).innerHTML = '<div style="background:'+c.bg+';color:'+x+';padding:16px;border-radius:10px"><div style="font:700 20px var(--display)">Fresh and ready</div><div style="font-size:16px">Order before 6pm for same-day pickup.</div></div>'+
+        '<div class="ratio-line '+(r>=4.5?'okr':'')+'">'+r.toFixed(1)+':1 &nbsp;'+(r>=4.5?'Passes':'Not yet, needs 4.5:1')+'</div>';
+    }
+    bindSteppers(root,S,(k,v) => v+'%',k => draw(+k.slice(1)));
+    [0,1,2].forEach(draw);
+    return () => cards.map((c,i) => { const r = ratioOf(hex(i),c.bg); return {ok:r>=4.5, pass:c.name+' is readable ('+r.toFixed(1)+':1).', fail:c.name+' is at '+r.toFixed(1)+':1. It needs 4.5:1.'}; });
+  }},
+{ id:'e7', unit:'Unit 3: Color', skill:'Color', title:'60-30-10 painter',
+  blurb:'Paint this app screen using the 60-30-10 rule.',
+  tip:'60% calm neutral for the background, 30% for cards, 10% bold accent for the main action. Tap a swatch, then tap an area.',
+  mount(root){
+    const SW = [{id:'snow',n:'Snow',hex:'#F7F8FA',k:'neutral'},{id:'cloud',n:'Cloud',hex:'#E3E7EE',k:'neutral'},{id:'ink',n:'Ink',hex:'#1B2233',k:'neutral'},{id:'sky',n:'Sky',hex:'#9CC2FF',k:'soft'},{id:'tang',n:'Tangerine',hex:'#FF6B2C',k:'accent'},{id:'vio',n:'Violet',hex:'#6A3DF0',k:'accent'}];
+    const P = {bg:null, surf:null, btn:null}; let sel = null;
+    root.innerHTML = '<div class="swr" id="sw"></div><div id="pv" style="margin-top:16px"></div>';
+    const sw = root.querySelector('#sw'), pv = root.querySelector('#pv');
+    const best = h => ratioOf(h,'#101828') >= ratioOf(h,'#FFFFFF') ? '#101828' : '#FFFFFF';
+    function drawSw(){
+      sw.innerHTML = SW.map(s => '<button type="button" class="swt'+(sel===s.id?' on':'')+'" data-id="'+s.id+'" aria-pressed="'+(sel===s.id)+'" style="background:'+s.hex+';color:'+best(s.hex)+'">'+s.n+'</button>').join('');
+      sw.querySelectorAll('.swt').forEach(b => b.addEventListener('click', () => { sel = b.dataset.id; drawSw(); }));
+    }
+    const sty = (r,extra) => P[r] ? 'background:'+P[r].hex+';color:'+best(P[r].hex)+';' + extra : 'background:repeating-linear-gradient(45deg,var(--bg),var(--bg) 8px,var(--line) 8px,var(--line) 16px);color:var(--muted);' + extra;
+    function draw(){
+      pv.innerHTML = '<div class="reg" role="button" tabindex="0" data-r="bg" aria-label="Background area" style="'+sty('bg','padding:16px;border-radius:14px;')+'">'+
+        '<div style="font-size:13px;margin-bottom:8px">'+(P.bg?'':'Tap to paint the background')+'</div>'+
+        '<div class="reg" role="button" tabindex="0" data-r="surf" aria-label="Card area" style="'+sty('surf','padding:16px;border-radius:10px;')+'">'+
+        '<div style="font:700 18px var(--display)">Today\'s plan</div><div style="font-size:15px;margin-bottom:12px">Three tasks left. '+(P.surf?'':'(Tap to paint this card)')+'</div>'+
+        '<div class="reg" role="button" tabindex="0" data-r="btn" aria-label="Button" style="'+sty('btn','display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:10px;font-weight:600;')+'">'+(P.btn?'Add task':'Paint button')+'</div></div></div>';
+      pv.querySelectorAll('.reg').forEach(el => onActivate(el, e => {
+        const r = el.dataset.r;
+        if (e && e.stopPropagation) e.stopPropagation();
+        if (!sel){ pv.insertAdjacentHTML('beforeend','<p class="muted small" id="selhint">Pick a swatch first.</p>'); setTimeout(() => { const h = pv.querySelector('#selhint'); if (h) h.remove(); },1800); return; }
+        P[r] = SW.find(s => s.id === sel); draw();
+      }));
+    }
+    drawSw(); draw();
+    return () => [
+      {ok:!!P.bg && P.bg.k==='neutral', pass:'The background is a calm neutral.', fail:'Paint the background with a calm neutral (Snow, Cloud or Ink).'},
+      {ok:!!P.surf && !!P.bg && P.surf.hex!==P.bg.hex && P.surf.k!=='accent', pass:'The card is different from the background without shouting.', fail:'Paint the card with a different, quiet color than the background (not an accent).'},
+      {ok:!!P.btn && P.btn.k==='accent', pass:'The button uses a bold accent. It is the 10%.', fail:'Give the button a bold accent color (Tangerine or Violet).'},
+      {ok:!!P.btn && !!P.surf && ratioOf(P.btn.hex,P.surf.hex)>=2, pass:'The button clearly stands out from the card.', fail:'The button blends into the card. Pick colors with more difference.'}
+    ];
+  }},
+{ id:'e8', unit:'Unit 4: Layout and flow', skill:'Layout', title:'Wireframe builder',
+  blurb:'Build a recipe detail screen from grey blocks.',
+  tip:'Put the header first and navigation last. Show the image above the text. Include exactly one primary button, and skip the ad.',
+  mount(root){
+    const CMP = {hdr:{n:'Header bar',h:40},img:{n:'Image',h:96},txt:{n:'Title and text',h:64},btn:{n:'Primary button',h:48},lst:{n:'Ingredient list',h:84},nav:{n:'Bottom navigation',h:48},ad:{n:'Ad banner',h:52}};
+    const blocks = []; let sel = -1;
+    root.innerHTML = '<div class="phone" id="ph"></div><div class="btns" id="tools" style="margin:12px 0"></div><strong class="small">Add a block</strong><div class="btns" id="pal" style="margin-top:8px"></div>';
+    const ph = root.querySelector('#ph'), tools = root.querySelector('#tools'), pal = root.querySelector('#pal');
+    pal.innerHTML = Object.keys(CMP).map(k => '<button type="button" class="btn ghost sm" data-add="'+k+'">+ '+CMP[k].n+'</button>').join('');
+    pal.querySelectorAll('button').forEach(b => b.addEventListener('click', () => { if (blocks.length>=8) return; blocks.push(b.dataset.add); sel = blocks.length-1; draw(); }));
+    function inner(t){
+      if (t==='txt') return '<div class="bars"><i style="width:70%"></i><i style="width:95%"></i><i style="width:60%"></i></div>';
+      if (t==='lst') return '<div class="bars"><i style="width:80%"></i><i style="width:65%"></i><i style="width:75%"></i></div>';
+      if (t==='nav') return '<div class="dots"><i></i><i></i><i></i><i></i></div>';
+      return '<span>'+CMP[t].n+'</span>';
+    }
+    function draw(){
+      ph.innerHTML = blocks.length ? blocks.map((t,i) => '<div class="wf wf-'+t+(i===sel?' sel':'')+'" role="button" tabindex="0" data-i="'+i+'" aria-pressed="'+(i===sel)+'" aria-label="'+CMP[t].n+'" style="min-height:'+CMP[t].h+'px">'+inner(t)+'</div>').join('') : '<p class="muted small" style="text-align:center;margin:auto">Your screen is empty. Add blocks below.</p>';
+      ph.querySelectorAll('.wf').forEach(el => onActivate(el, () => { sel = +el.dataset.i; draw(); }));
+      tools.innerHTML = '<button type="button" class="btn ghost sm" data-t="up" '+(sel<=0?'disabled':'')+'>Move up</button><button type="button" class="btn ghost sm" data-t="down" '+(sel<0||sel>=blocks.length-1?'disabled':'')+'>Move down</button><button type="button" class="btn ghost sm" data-t="rm" '+(sel<0?'disabled':'')+'>Remove</button>';
+      tools.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+        const t = b.dataset.t;
+        if (t==='up'&&sel>0){ const x = blocks[sel]; blocks[sel]=blocks[sel-1]; blocks[sel-1]=x; sel--; }
+        else if (t==='down'&&sel<blocks.length-1){ const x = blocks[sel]; blocks[sel]=blocks[sel+1]; blocks[sel+1]=x; sel++; }
+        else if (t==='rm'&&sel>=0){ blocks.splice(sel,1); sel = Math.min(sel,blocks.length-1); }
+        draw();
+      }));
+    }
+    draw();
+    return () => { const ii = blocks.indexOf('img'), ti = blocks.indexOf('txt'); return [
+      {ok:blocks[0]==='hdr', pass:'The screen starts with a header bar.', fail:'Start the screen with a header bar.'},
+      {ok:blocks.filter(b => b==='btn').length===1, pass:'There is exactly one primary button, so the main action is clear.', fail:'Include exactly one primary button.'},
+      {ok:blocks.length>0 && blocks[blocks.length-1]==='nav', pass:'Navigation sits at the bottom, in easy thumb reach.', fail:'Put the bottom navigation last.'},
+      {ok:ii>=0 && ti>=0 && ii<ti, pass:'The image sits above the text.', fail:'Add an image and place it above the title and text.'},
+      {ok:blocks.includes('lst'), pass:'The ingredient list is there. It is a recipe, after all.', fail:'A recipe screen needs an ingredient list.'},
+      {ok:!blocks.includes('ad') && blocks.length<=7, pass:'Clean and simple: no ad, not overcrowded.', fail:'Remove the ad banner and keep it to 7 blocks or fewer.'}
+    ]; };
+  }},
+{ id:'e9', unit:'Unit 4: Layout and flow', skill:'Flow', title:'Flow builder',
+  blurb:'Map what happens when someone saves a recipe.',
+  tip:'Tap the steps in the order they happen. Then choose a shape for each: rounded for start and end, a box for a step, a diamond for a yes or no question.',
+  mount(root){
+    const ST = {a:{t:'Open the app'},b:{t:'Browse recipes'},c:{t:'Open a recipe'},d:{t:'Tap Save'},e:{t:'Is the user logged in?'},f:{t:'Log in'},g:{t:'See the "Saved" message'}};
+    const poolOrder = ['e','a','g','c','f','b','d'];
+    let seq = []; const shape = {};
+    root.innerHTML = '<strong class="small">1. Tap steps in order</strong><div class="btns" id="pool" style="margin:8px 0 16px"></div><strong class="small">2. Pick a shape for each step</strong><div id="seq" style="margin-top:8px"></div>';
+    const pool = root.querySelector('#pool'), sq = root.querySelector('#seq');
+    function draw(){
+      const rest = poolOrder.filter(id => !seq.includes(id));
+      pool.innerHTML = rest.length ? rest.map(id => '<button type="button" class="btn ghost sm" data-id="'+id+'">'+ST[id].t+'</button>').join('') : '<span class="muted small">All steps placed.</span>';
+      pool.querySelectorAll('button').forEach(b => b.addEventListener('click', () => { seq.push(b.dataset.id); draw(); }));
+      sq.innerHTML = seq.length ? seq.map((id,i) => {
+        const sh = shape[id] || 'none';
+        return (i>0?'<div class="arrow" aria-hidden="true">&darr;</div>':'')+
+          '<div class="fnode fn-'+sh+'">'+ST[id].t+'</div>'+
+          '<div class="btns" style="justify-content:center;margin:6px 0"><div class="seg" role="group" aria-label="Shape for '+ST[id].t+'">'+
+          [['term','Rounded'],['step','Box'],['dec','Diamond']].map(o => '<button type="button" class="'+(sh===o[0]?'on':'')+'" data-id="'+id+'" data-sh="'+o[0]+'">'+o[1]+'</button>').join('')+'</div>'+
+          '<button type="button" class="btn ghost sm" data-rm="'+id+'">Remove</button></div>';
+      }).join('') : '<p class="muted small">Your flow will appear here.</p>';
+      sq.querySelectorAll('[data-sh]').forEach(b => b.addEventListener('click', () => { shape[b.dataset.id] = b.dataset.sh; draw(); }));
+      sq.querySelectorAll('[data-rm]').forEach(b => b.addEventListener('click', () => { seq = seq.filter(x => x !== b.dataset.rm); draw(); }));
+    }
+    draw();
+    const ix = id => seq.indexOf(id);
+    return () => [
+      {ok:ix('a')===0, pass:'The flow starts by opening the app.', fail:'Think about where the whole journey begins.'},
+      {ok:ix('b')>=0 && ix('c')>ix('b'), pass:'Browsing comes before opening a recipe.', fail:'You browse recipes before you can open one.'},
+      {ok:ix('d')>=0 && ix('e')>ix('d'), pass:'The login check happens after tapping Save.', fail:'The app only checks if you are logged in after you tap Save.'},
+      {ok:ix('e')>=0 && ix('f')>ix('e'), pass:'Logging in comes after the login question.', fail:'Logging in only happens if the answer to the question is no.'},
+      {ok:seq.length===7 && ix('g')===6, pass:'The flow ends on the happy ending: the Saved message.', fail:'End the flow with the Saved message, with all 7 steps placed.'},
+      {ok:shape.e==='dec', pass:'The yes/no question is a diamond.', fail:'A yes/no question uses a diamond.'},
+      {ok:shape.a==='term' && shape.g==='term', pass:'Start and end are rounded shapes.', fail:'Start and end points are rounded shapes.'},
+      {ok:['b','c','d','f'].every(k => shape[k]==='step'), pass:'Regular steps are boxes.', fail:'Regular steps (browse, open, save, log in) are boxes.'}
+    ];
+  }},
+{ id:'e10', unit:'Boss level', skill:'Everything', title:'Capstone: fix the card',
+  blurb:'Use everything you learned to rescue a badly designed card.',
+  tip:'Check your list: title bigger than text, text at least 16px, gaps on the 8 grid, button at least 44px tall, readable color, roomy padding, and the right order.',
+  mount(root){
+    const S = {t:16, b:12, gap:13, h:32, L:70, pad:10, ord:'btb'};
+    root.innerHTML = '<div id="pv"></div><div id="ct"></div>';
+    const pv = root.querySelector('#pv'), ct = root.querySelector('#ct');
+    ct.innerHTML = stepper('t','Title size',12,40,S.t,S.t+'px')+stepper('b','Body text size',10,24,S.b,S.b+'px')+
+      stepper('gap','Gap under the title',0,48,S.gap,S.gap+'px')+stepper('h','Button height',24,72,S.h,S.h+'px')+
+      stepper('L','Body text lightness',0,100,S.L,S.L+'%')+stepper('pad','Card padding',0,40,S.pad,S.pad+'px')+
+      '<div class="ctl-grp"><strong>Order, top to bottom</strong><br>'+seg('ord',[{v:'tbb',t:'Title, text, button'},{v:'btb',t:'Button, title, text'}],S.ord)+'</div>';
+    const bodyHex = () => hsl2hex(0,0,S.L);
+    function draw(){
+      const T = '<div style="font:700 '+S.t+'px/1.15 var(--display);color:#14213D;margin-bottom:'+S.gap+'px">Weekend market</div>';
+      const B = '<div style="font-size:'+S.b+'px;color:'+bodyHex()+';margin-bottom:16px">Fresh produce, live music and street food every Saturday.</div>';
+      const K = '<span style="display:inline-flex;align-items:center;height:'+S.h+'px;padding:0 20px;border-radius:10px;background:#2B50E6;color:#fff;font-weight:600;font-size:15px">Get tickets</span>';
+      pv.innerHTML = '<div class="mui" style="padding:'+S.pad+'px">'+(S.ord==='tbb'?T+B+K:K+'<div style="height:16px"></div>'+T+B)+'</div>';
+    }
+    bindSteppers(ct,S,(k,v) => k==='L' ? v+'%' : v+'px',draw);
+    bindSeg(ct,(g,v) => { S.ord = v; draw(); });
+    draw();
+    return () => { const r = ratioOf(bodyHex(),'#FFFFFF'); return [
+      {ok:S.t>=S.b+4, pass:'The title is clearly larger than the text.', fail:'Make the title at least 4px larger than the body text.'},
+      {ok:S.b>=16, pass:'Body text is at least 16px.', fail:'Raise the body text to 16px or more.'},
+      {ok:S.gap%8===0 && S.gap>=8, pass:'The gap under the title is on the 8pt grid.', fail:'Make the gap under the title a multiple of 8.'},
+      {ok:S.h>=44, pass:'The button is easy to tap (44px or taller).', fail:'Make the button at least 44px tall.'},
+      {ok:r>=4.5, pass:'The body text has strong contrast ('+r.toFixed(1)+':1).', fail:'The body text is too pale ('+r.toFixed(1)+':1). It needs 4.5:1.'},
+      {ok:S.pad%8===0 && S.pad>=16, pass:'The card has roomy padding on the 8pt grid.', fail:'Card padding should be a multiple of 8 and at least 16px.'},
+      {ok:S.ord==='tbb', pass:'The order is title, text, button.', fail:'Put the title first, then the text, then the button.'}
+    ]; };
+  }}
+];
+
+const BADGES = [
+  {id:'first', n:'First step', d:'Finish any challenge', i:'1', t:() => Object.keys(st.ex).length>=1},
+  {id:'star3', n:'Perfectionist', d:'Earn 3 stars on a challenge', i:'★', t:() => Object.values(st.ex).some(e => e.stars===3)},
+  {id:'hat', n:'Hat trick', d:'3 stars on three challenges', i:'3', t:() => Object.values(st.ex).filter(e => e.stars===3).length>=3},
+  {id:'grid', n:'Grid guru', d:'3 stars on Snap to 8', i:'8', t:() => (st.ex.e2||{}).stars===3},
+  {id:'eagle', n:'Eagle eye', d:'3 stars on Spot the flaws', i:'◎', t:() => (st.ex.e3||{}).stars===3},
+  {id:'color', n:'Color whiz', d:'3 stars on Contrast fixer', i:'◐', t:() => (st.ex.e6||{}).stars===3},
+  {id:'first-try', n:'First-try flair', d:'Perfect score on a first try', i:'!', t:() => Object.values(st.ex).some(e => e.firstPerfect)},
+  {id:'streak', n:'On a roll', d:'Practice 3 days in a row', i:'3d', t:() => streak()>=3},
+  {id:'quiz', n:'Quiz champion', d:'90%+ on the Part 1 final', i:'Q', t:() => !!store.final && store.final.score/store.final.total>=0.9},
+  {id:'grad', n:'Studio graduate', d:'Finish every challenge', i:'🎓', t:() => EX.every(e => st.ex[e.id])}
+];
+function awardBadges(){
+  const fresh = [];
+  BADGES.forEach(b => { if (!st.badges[b.id] && b.t()){ st.badges[b.id] = fmtD(new Date()); fresh.push(b); } });
+  return fresh;
+}
+
+/* ----- studio screens ----- */
+function isUnlocked(id){ const i = EX.findIndex(e => e.id===id); return i<=0 || !!st.ex[EX[i-1].id]; }
+function studioStats(){
+  const done = EX.filter(e => st.ex[e.id]);
+  const avg = done.length ? done.reduce((s,e) => s+st.ex[e.id].best,0)/done.length*100 : null;
+  const p1 = Object.values(store.quiz).map(r => r.score/r.total*100);
+  if (store.final) p1.push(store.final.score/store.final.total*100);
+  const p1avg = p1.length ? p1.reduce((a,b) => a+b,0)/p1.length : null;
+  const parts = [avg,p1avg].filter(x => x!==null);
+  const overall = parts.length ? parts.reduce((a,b) => a+b,0)/parts.length : null;
+  return {done:done.length, avg, p1avg, overall};
+}
+function studioTeaser(){
+  const s = studioStats(), lv = lvlOf(st.xp);
+  return '<a class="row" href="#/studio" style="border-color:var(--accent)"><div><div class="row-title">Part 2: Hands-on Studio</div>'+
+    '<div class="muted small">'+(s.done ? 'Level '+lv+', '+LEVELS[lv-1]+'. '+s.done+' of '+EX.length+' challenges done.' : EX.length+' interactive challenges with stars, XP and badges.')+'</div></div>'+
+    '<span class="pill">'+(s.done ? st.xp+' XP' : 'New')+'</span></a>';
+}
+function studioHome(){
+  const s = studioStats(), lv = lvlOf(st.xp), max = lv>=LEVELS.length;
+  const into = st.xp - (lv-1)*XPL, pct = max ? 100 : Math.min(100, into/XPL*100);
+  const sk = {}; EX.forEach(e => { if (e.skill==='Everything') return; (sk[e.skill] = sk[e.skill] || []).push(st.ex[e.id] ? st.ex[e.id].best : 0); });
+  const skills = Object.keys(sk).map(k => { const v = Math.round(sk[k].reduce((a,b) => a+b,0)/sk[k].length*100); return '<div class="skill"><span>'+k+'</span><div class="xpbar"><span style="width:'+v+'%"></span></div><b>'+v+'%</b></div>'; }).join('');
+  const badges = BADGES.map(b => '<div class="badge'+(st.badges[b.id]?'':' off')+'"><span class="bi">'+b.i+'</span><strong>'+b.n+'</strong><div class="muted">'+b.d+'</div></div>').join('');
+  let curSeen = false, idx = 0, lastUnit = '', path = '';
+  EX.forEach((e,i) => {
+    if (e.unit !== lastUnit){ lastUnit = e.unit; path += '<div class="unit-h"><strong>'+esc(e.unit)+'</strong></div>'; idx = 0; }
+    const r = st.ex[e.id], open = isUnlocked(e.id);
+    const cur = open && !r && !curSeen; if (cur) curSeen = true;
+    const off = [0,44,0,-44][idx%4]; idx++;
+    const stars = r ? '★'.repeat(r.stars)+'<span class="dim">'+'★'.repeat(3-r.stars)+'</span>' : '';
+    path += '<a class="node" href="#/studio/ex/'+e.id+'" style="transform:translateX('+off+'px)" '+(open?'':'aria-disabled="true"')+'><span class="nd'+(r?' done':(open?(cur?' cur':''):' lock'))+'">'+(r?'✓':(open?(i+1):'🔒'))+'</span><span class="nt">'+esc(e.title)+'</span><span class="ns">'+stars+'</span></a>';
+  });
+  const stk = streak();
+  return '<div class="stack"><div><a class="back" href="#/">Back to Part 1</a><h1 style="font-size:clamp(34px,10vw,50px)">Hands-on Studio</h1>'+
+    '<p class="muted" style="margin-top:12px;max-width:46ch">Learn by doing. Every challenge gives you stars, XP and instant feedback. You can retry any of them as many times as you like.</p></div>'+
+    '<section class="card"><div class="lvl-top"><div><div class="muted small">Level '+lv+'</div><h2 style="font-size:26px">'+LEVELS[lv-1]+'</h2></div><div class="grade"><span class="muted small">Grade</span><b>'+(s.overall===null?'—':letter(s.overall))+'</b></div></div>'+
+    '<div class="xpbar" style="margin:14px 0 6px" role="progressbar" aria-valuenow="'+Math.round(pct)+'" aria-valuemin="0" aria-valuemax="100"><span style="width:'+pct+'%"></span></div>'+
+    '<div class="muted small">'+(max ? 'Top level reached. '+st.xp+' XP total.' : (XPL-into)+' XP to level '+(lv+1))+'</div>'+
+    '<div class="stats"><div class="stat"><b>'+st.xp+'</b><span class="muted small">XP</span></div><div class="stat"><b>'+stk+'</b><span class="muted small">day streak</span></div><div class="stat"><b>'+s.done+'/'+EX.length+'</b><span class="muted small">done</span></div></div>'+
+    (s.p1avg!==null||s.avg!==null ? '<p class="muted small" style="margin:14px 0 0">'+(s.p1avg!==null?'Part 1 quizzes: '+Math.round(s.p1avg)+'%. ':'')+(s.avg!==null?'Studio: '+Math.round(s.avg)+'%.':'')+'</p>' : '')+'</section>'+
+    '<h2>Your path</h2><div class="path">'+path+'</div>'+
+    '<section class="card"><h3>Skills</h3>'+(skills)+'</section>'+
+    '<section><h2 style="margin-bottom:12px">Badges</h2><div class="badges">'+badges+'</div></section></div>';
+}
+function exPage(id){
+  const ex = EX.find(e => e.id===id);
+  if (!ex) return '<div class="stack"><a class="back" href="#/studio">Back to the path</a><p>That challenge does not exist.</p></div>';
+  if (!isUnlocked(id)){
+    const prev = EX[EX.findIndex(e => e.id===id)-1];
+    return '<div class="stack"><a class="back" href="#/studio">Back to the path</a><h1 style="font-size:clamp(30px,8vw,42px)">Locked for now</h1><div class="card"><p>Finish <strong>'+esc(prev.title)+'</strong> first to unlock this one.</p><a class="btn" href="#/studio/ex/'+prev.id+'">Go to '+esc(prev.title)+'</a></div></div>';
+  }
+  return '<div class="stack"><div><a class="back" href="#/studio">Back to the path</a><p class="muted small" style="margin-bottom:4px">'+esc(ex.unit)+'</p>'+
+    '<h1 style="font-size:clamp(30px,8vw,42px)">'+esc(ex.title)+'</h1><p class="muted" style="margin-top:8px">'+esc(ex.blurb)+'</p></div>'+
+    '<div class="card tipbox"><strong>Quick tip.</strong> '+esc(ex.tip)+'</div>'+
+    '<section class="card" id="st-mount" aria-label="Interactive workspace"></section>'+
+    '<div class="btns"><button type="button" class="btn" id="st-check">Check my work</button></div><div id="st-fb" aria-live="polite"></div></div>';
+}
+let run = null;
+function initEx(id){
+  const ex = EX.find(e => e.id===id), mt = document.getElementById('st-mount');
+  if (!ex || !mt) return;
+  const rulesFn = ex.mount(mt);
+  run = {id:id, rulesFn:rulesFn, last:null};
+  document.getElementById('st-check').addEventListener('click', () => {
+    const rs = rulesFn(); run.last = rs;
+    const ok = rs.filter(r => r.ok).length, n = rs.length, all = ok===n;
+    const fb = document.getElementById('st-fb');
+    const msg = all ? 'Every rule is satisfied. That is real design thinking.' : ok>=n*0.7 ? 'You are really close. Adjust and check again, or finish now.' : 'Good start. Read the hints below and tweak a little.';
+    fb.innerHTML = '<div class="card fb-card'+(all?' win':'')+'"><h3>'+(all ? 'You nailed it!' : ok+' of '+n+' done')+'</h3><p class="muted" style="margin-top:6px">'+msg+'</p>'+
+      '<ul class="rl">'+rs.map(r => '<li class="'+(r.ok?'ok':'no')+'"><span class="mark">'+(r.ok?'✓':'○')+'</span><span>'+esc(r.ok?r.pass:r.fail)+'</span></li>').join('')+'</ul>'+
+      '<div class="btns"><button type="button" class="btn'+(all?'':' ghost')+'" id="st-fin">'+(all?'Finish and collect XP':'Finish with '+ok+'/'+n)+'</button></div></div>';
+    document.getElementById('st-fin').addEventListener('click', () => finishEx(id, ok/n));
+    fb.scrollIntoView({behavior:'smooth', block:'nearest'});
+  });
+}
+const GOOD3 = ['Flawless!','Look at you go!','That is designer-level work.','Perfect. Seriously impressive.'];
+const GOOD2 = ['Great work!','Nicely done, almost perfect.','You are clearly getting it.'];
+const GOOD1 = ['You finished it, and that is how skill is built.','Good start. Every try makes the next one easier.','Done! Tap Try again to earn more stars.'];
+const pick = a => a[Math.floor(Math.random()*a.length)];
+function finishEx(id,pct){
+  const prev = st.ex[id] || {best:0,stars:0,xp:0,tries:0};
+  const stars = pct>=1 ? 3 : pct>=0.7 ? 2 : 1, xp = 10 + stars*10;
+  const lvBefore = lvlOf(st.xp), gain = Math.max(0, xp - prev.xp);
+  st.ex[id] = {best:Math.max(prev.best,pct), stars:Math.max(prev.stars,stars), xp:Math.max(prev.xp,xp), tries:prev.tries+1, firstPerfect:!!prev.firstPerfect || (prev.tries===0 && pct>=1)};
+  st.xp += gain;
+  const d = fmtD(new Date()); if (!st.days.includes(d)){ st.days.push(d); st.days = st.days.slice(-90); }
+  const fresh = awardBadges(); saveSt();
+  const lvAfter = lvlOf(st.xp), idx = EX.findIndex(e => e.id===id), next = EX[idx+1];
+  const msg = stars===3 ? pick(GOOD3) : stars===2 ? pick(GOOD2) : pick(GOOD1);
+  const rs = run && run.last ? run.last : [];
+  const got = rs.filter(r => r.ok), miss = rs.filter(r => !r.ok);
+  app.innerHTML = '<div class="stack results"><div class="center"><div class="stars" aria-label="'+stars+' of 3 stars">'+[1,2,3].map(n => '<span class="'+(n<=stars?'on':'')+'" style="animation-delay:'+(n*0.18)+'s">★</span>').join('')+'</div>'+
+    '<h1 style="font-size:clamp(32px,9vw,46px);margin-top:12px">'+msg+'</h1><p class="muted" style="margin-top:8px">'+Math.round(pct*100)+'% on '+esc(EX[idx].title)+' ('+letter(pct*100)+')</p></div>'+
+    '<section class="card"><div class="xp-row"><strong class="xp-gain">+'+gain+' XP</strong><span class="muted">'+st.xp+' XP total</span></div>'+
+    (lvAfter>lvBefore ? '<div class="idea" style="margin-top:12px"><strong>Level up!</strong> You are now level '+lvAfter+': '+LEVELS[lvAfter-1]+'.</div>' : '')+
+    (gain===0 ? '<p class="muted small" style="margin:8px 0 0">You already earned this much XP here. Get more stars to earn more.</p>' : '')+'</section>'+
+    (fresh.length ? '<section class="card"><h3>New badge'+(fresh.length>1?'s':'')+'</h3>'+fresh.map(b => '<div class="k-q"><strong>'+b.i+'&nbsp; '+b.n+'</strong><div class="muted small">'+b.d+'</div></div>').join('')+'</section>' : '')+
+    (got.length ? '<section class="card"><h3>What you got right</h3><ul class="rl">'+got.map(r => '<li class="ok"><span class="mark">✓</span><span>'+esc(r.pass)+'</span></li>').join('')+'</ul>'+
+      (miss.length ? '<h3 style="margin-top:8px">Next time</h3><ul class="rl">'+miss.map(r => '<li class="no"><span class="mark">○</span><span>'+esc(r.fail)+'</span></li>').join('')+'</ul>' : '')+'</section>' : '')+
+    '<div class="btns">'+(next ? '<button type="button" class="btn" data-go="#/studio/ex/'+next.id+'">Next challenge</button>' : '<button type="button" class="btn" data-go="#/studio">See your progress</button>')+
+    '<button type="button" class="btn ghost" data-go="#/studio/ex/'+id+'">Try again</button><button type="button" class="btn ghost" data-go="#/studio">Back to the path</button></div></div>';
+  app.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => {
+    const h = b.dataset.go;
+    if (location.hash === h) render(true); else location.hash = h;
+  }));
+  window.scrollTo(0,0);
+  if (stars>=2 || lvAfter>lvBefore) confetti();
+}
+function confetti(){
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const cv = document.createElement('canvas'); cv.className = 'confetti'; cv.width = innerWidth; cv.height = innerHeight; document.body.appendChild(cv);
+  const g = cv.getContext('2d'), cols = ['#F5B301','#2B50E6','#12805C','#FF6B2C','#8AA2FF'];
+  const ps = Array.from({length:90}, () => ({x:innerWidth/2, y:innerHeight*0.3, vx:(Math.random()-0.5)*13, vy:-Math.random()*12-4, s:6+Math.random()*6, c:cols[Math.floor(Math.random()*cols.length)], r:Math.random()*6}));
+  let f = 0;
+  (function tick(){
+    g.clearRect(0,0,cv.width,cv.height);
+    ps.forEach(p => { p.vy += 0.35; p.x += p.vx; p.y += p.vy; p.r += 0.2; g.save(); g.translate(p.x,p.y); g.rotate(p.r); g.fillStyle = p.c; g.fillRect(-p.s/2,-p.s/2,p.s,p.s*0.6); g.restore(); });
+    f++; if (f<110) requestAnimationFrame(tick); else cv.remove();
+  })();
+}
+
+
 /* ---------- Router ---------- */
 function render(scroll){
   const h = location.hash.replace(/^#\/?/, '');
@@ -375,10 +985,12 @@ function render(scroll){
     if (!qs || qs.key !== parts[1] || (qs.done && scroll)) startQuiz(parts[1]);
     html = qs.done ? results() : quiz();
   }
+  else if (parts[0] === 'studio') html = parts[1] === 'ex' ? exPage(parts[2]) : studioHome();
   else if (parts[0] === 'key') html = key();
   else html = home();
   app.innerHTML = html;
   initCardLab(); initContrastLab();
+  if (parts[0] === 'studio' && parts[1] === 'ex') initEx(parts[2]);
   const dt = document.getElementById('demo-toggle');
   if (dt) dt.addEventListener('click', () => {
     const on = document.getElementById('demo').classList.toggle('on');
